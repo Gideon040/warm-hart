@@ -81,3 +81,5 @@ er nog geen artikelen zijn (zie structuurspec).
    in GA4 realtime.
 7. Deploy, domein koppelen, GSC verifiëren; domein + webmail-URL
    invullen bij de organisatie in het portaal.
+
+@AGENTS.md

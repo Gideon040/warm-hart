@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { haalArtikel, artikelDatum } from "../../../lib/kennisbank";
 import { artikelSchema, breadcrumbSchema } from "../../../lib/schema";
@@ -53,7 +54,7 @@ export default async function Artikel({ params }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas) }}
       />
-      <a className="zb-artikel-terug" href="/kennisbank">&larr; Kennisbank</a>
+      <Link className="zb-artikel-terug" href="/kennisbank">&larr; Kennisbank</Link>
       <article>
         <h1>{artikel.titel}</h1>
         <time dateTime={artikel.gepubliceerd_op}>
@@ -63,7 +64,7 @@ export default async function Artikel({ params }: Props) {
       </article>
       <aside className="zb-artikel-cta">
         <p>Vragen over uw situatie? {site.naam} helpt u graag verder.</p>
-        <a href="/#aanvraag">Stel uw zorgvraag</a>
+        <Link href="/#aanvraag">Stel uw zorgvraag</Link>
         <a href={`tel:${site.telefoon}`}>{site.telefoon}</a>
       </aside>
     </main>

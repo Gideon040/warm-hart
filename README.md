@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Professioneel In Zorg met een warm Hart
 
-## Getting Started
+Klantsite van Zorgbaar, gebouwd volgens `zorgbaarportaal-structuur-wireframes.md`
+met het ontwerp uit `D:\zorgbaar-portaal\warmhart-website` als schil.
 
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```
+npm run dev     # lokaal, post naar localhost:3001 (portaal)
+npm run build   # productie, post naar app.zorgbaar.nl
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Opbouw
+- `site.config.ts`: alle klantgegevens, diensten, werkgebied, extraPaginas.
+- `app/zorg/inhoud.ts`: teksten per dienst (persoonlijke verzorging letterlijk uit het ontwerp).
+- `components/Blokken.tsx`: bouwstenen van het ontwerp (hero, kaarten, stappen, FAQ met schema, CTA's).
+- `components/ZorgvraagWizard.tsx`: 5-stapswizard op /zorgvraag (spec 4.6).
+- Startpakket ongewijzigd: `components/utm.ts`, `components/ZorgvraagFormulier.tsx`, `lib/*`,
+  `app/bedankt`, `app/kennisbank`, `app/sitemap.ts`, `app/robots.ts`.
+- Afbeeldingen: de 20 ontwerpbeelden als WebP (max. 1800px) in `public/images`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Pagina's (27)
+Home, 5 dienstpagina's, 5 dienst×Almere-pagina's, tarieven-en-vergoeding, over, zorgvraag,
+contact, werkgebied, veelgestelde-vragen, privacy, klachtenregeling, algemene-voorwaarden,
+kennisbank (+ artikelen uit het portaal), bedankt, 404.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## SEO-techniek
+- Metadata per pagina via `components/meta.ts`: titel (keyword vooraan, korte merknaam
+  `merkKort`), description max. 160 tekens, canonical, Open Graph + Twitter-kaart.
+  Staande foto's vallen terug op `app/opengraph-image.jpg` (1200x630).
+- Geen canonical in de layout: 404 (noindex) en /bedankt erven niet die van de homepage.
+- Schema: LocalBusiness/MedicalBusiness + dienstencatalogus + WebSite (layout), Service met
+  beeld (dienst- en plaatspagina's), Person voor Anushka (/over), FAQPage, BreadcrumbList
+  op alles onder de home; Article via het startpakket.
+- Favicon, SVG-icoon en Apple-icoon (hart), themakleur.
+- `/llms.txt`: samenvatting voor AI-zoekmachines, gegenereerd uit site.config.
+- `gscVerificatie` in site.config: invullen bij oplevering (GSC, HTML-tag).
+- Gecontroleerd met een crawl: alle pagina's 200, één H1, geen ontbrekende alt-teksten,
+  geen kapotte interne links, sitemap compleet.
 
-## Learn More
+## Beslissingen
+- Werkgebied = alleen Almere (zoals in het ontwerp). De vijf stadsdelen zijn kernen van die ene
+  plaats, geen losse plaatspagina's (te dun, doorway-risico). Extra plaats = één regel in `werkgebied`.
+- Geen verpleging-pagina: geen BIG-registratie bekend (regel 6.6).
+- Nachtzorg is één pagina met H2 Waakdienst en H2 Slaapdienst (regel 6.2).
+- Alleen particulier en pgb als vergoedingsroutes (dat noemt het ontwerp).
+- Tarieven "Op aanvraag" (niet aangeleverd, regel 6.8).
+- Reviews-pagina niet gebouwd, kennisbank-blok op home pas bij >= 3 artikelen, Kennisbank in
+  het menu pas bij >= 1 artikel.
+- "[TERMIJN INVULLEN]" uit het ontwerp vervangen door "Na de kennismaking spreken we samen een
+  startdatum af." Contact-FAQ "Vertel me gerust" -> "Vertel ons gerust" (wij-vorm).
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Open punten (klant/Gideon)
+1. Organisatie aanmaken in het portaal met slug `warm-hart` (bestaat nog niet).
+2. Domein (nu placeholder `https://www.warmhartzorg.nl`), GA4 Measurement ID en GSC-verificatiecode.
+3. Wkkgz: geschilleninstantie en klachtenfunctionaris (klachtenregeling noemt ze nu zonder naam).
+4. Wtza-status, beroepsaansprakelijkheid.
+5. Bevestigen: worden zowel waakdienst als slaapdienst aangeboden?
+6. Bevestigen: dagbesteding is één op één bij de cliënt thuis (niet in een groep)?
+7. Bevestigen: de Zorgbaar-standaardvoorwaarden (o.a. afzeggen tot 24 uur, maandfactuur).
+8. Eigen zin van Anushka over Almere (`werkgebied[0].eigenZin`) en eventueel een portretfoto.
+9. Tarieven per dienst, als ze die wil tonen.
+10. 4 startartikelen kennisbank aanmaken in het portaal.
