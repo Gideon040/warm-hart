@@ -39,6 +39,7 @@ const GROEPEN: { kop: string; vragen: Vraag[] }[] = [
       { vraag: "Kan ik ook in het weekend zorg krijgen?", antwoord: "Ja, alle zorg is ook op zaterdag en zondag mogelijk." },
       { vraag: "Wanneer bent u bereikbaar?", antwoord: "Op maandag tot en met vrijdag van 10:00 tot 17:00 uur. In het weekend alleen voor spoedaanvragen." },
       { vraag: `In welke delen van ${site.plaats} biedt u zorg?`, antwoord: `In heel ${site.plaats}: Stad, Buiten, Haven, Poort en Hout.` },
+      { vraag: `Komen jullie ook buiten ${site.plaats}?`, antwoord: `Ja. Wij komen ook in ${site.steden.map((s) => s.naam).join(", ")}.` },
       { vraag: "Kan ik ook bellen namens een familielid?", antwoord: "Ja, dat kan. Vertel ons gerust voor wie u belt en wat er nodig is." },
       { vraag: "Zit ik ergens aan vast als ik contact opneem?", antwoord: "Nee. Een eerste gesprek is vrijblijvend." },
     ],

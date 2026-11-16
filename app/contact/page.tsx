@@ -45,8 +45,8 @@ export default function Contact() {
             </div>
             <div className="contactkaart">
               <h2><Hart />Werkgebied</h2>
-              <strong>{site.plaats}</strong>
-              <span>Wij komen bij u thuis, in heel {site.plaats}. <Link href="/werkgebied">Bekijk ons werkgebied</Link></span>
+              <strong>{site.plaats} en omgeving</strong>
+              <span>Wij komen bij u thuis, in {site.plaats} en de steden eromheen. <Link href="/werkgebied">Bekijk ons werkgebied</Link></span>
             </div>
           </div>
         </div>

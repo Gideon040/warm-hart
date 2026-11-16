@@ -39,7 +39,7 @@ function Optie({ aan, onClick, titel, sub }: { aan: boolean; onClick: () => void
 
 export default function ZorgvraagWizard() {
   const zoek = useSearchParams();
-  const kernen = site.werkgebied.flatMap((p) => p.kernen as readonly string[]);
+  const kernen = [...site.werkgebied.flatMap((p) => p.kernen as readonly string[]), ...site.steden.map((s) => s.naam)];
   const [stap, setStap] = useState(1);
   const [voor, setVoor] = useState<"zelf" | "naaste" | "">("");
   const [zorg, setZorg] = useState<string[]>(() => {

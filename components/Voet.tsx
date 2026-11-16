@@ -6,7 +6,6 @@ import { telLink, ZorgvraagKnop } from "./Blokken";
 // Footer (structuurspec 4.1 blok 11): diensten | werkgebied | contact |
 // juridisch, KvK/AGB-regel en "Website door Zorgbaar".
 export default function Voet() {
-  const hoofd = site.werkgebied[0];
   return (
     <>
       <footer className="voet">
@@ -14,12 +13,16 @@ export default function Voet() {
           <div className="voet-kolommen">
             <div className="voet-merk">
               <Logo />
-              <p>Particuliere zorg thuis in {site.plaats}. Persoonlijke verzorging, nachtzorg, palliatieve zorg, respijtzorg en dagbesteding.</p>
+              <p>Particuliere zorg thuis in {site.plaats} en omgeving. Persoonlijke verzorging, nachtzorg, palliatieve zorg, respijtzorg en dagbesteding.</p>
             </div>
             <div className="voet-kolom">
               <h2>Zorg</h2>
               <ul>
                 {site.diensten.map((d) => <li key={d.slug}><Link href={`/zorg/${d.slug}`}>{d.naam}</Link></li>)}
+                <li><Link href="/zorg/particuliere-thuiszorg">Particuliere thuiszorg</Link></li>
+                <li><Link href="/zorg/uurzorg">Zorg per uur</Link></li>
+                <li><Link href="/zorg/blokzorg">Blokzorg</Link></li>
+                <li><Link href="/zorg/24-uurszorg">24-uurszorg</Link></li>
                 <li><Link href="/tarieven-en-vergoeding">Tarieven &amp; vergoeding</Link></li>
               </ul>
             </div>
@@ -29,7 +32,9 @@ export default function Voet() {
                 {site.werkgebied.map((p) => (
                   <li key={p.slug}><Link href={`/zorg/${site.hoofddienst}/${p.slug}`}>Thuiszorg in {p.naam}</Link></li>
                 ))}
-                {hoofd.kernen.map((k) => <li key={k}>{k}</li>)}
+                {site.steden.map((s) => (
+                  <li key={s.slug}><Link href={`/zorg/particuliere-thuiszorg/${s.slug}`}>{s.naam}</Link></li>
+                ))}
                 <li><Link href="/werkgebied">Bekijk ons werkgebied</Link></li>
               </ul>
             </div>

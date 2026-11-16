@@ -6,8 +6,8 @@ import { BelBlok, DuoCta, Faq, Hart, Hero, Omvang, ZorgKaarten } from "@/compone
 import { FOTO } from "@/components/fotos";
 
 export const metadata: Metadata = paginaMeta({
-  titel: `Thuiszorg in ${site.plaats}: ons werkgebied | ${site.merkKort}`,
-  beschrijving: `Particuliere thuiszorg in heel ${site.plaats}: ${site.werkgebied[0].kernen.join(", ")}. Een vast gezicht, ook in het weekend.`,
+  titel: `Werkgebied: thuiszorg in ${site.plaats} en omgeving | ${site.merkKort}`,
+  beschrijving: `Wij bieden particuliere thuiszorg in heel ${site.plaats} en in ${site.steden.length} steden eromheen, van Lelystad tot Hilversum. Een vast gezicht, ook in het weekend.`,
   pad: "/werkgebied",
   foto: FOTO.straat,
 });
@@ -19,8 +19,8 @@ export default function Werkgebied() {
     <main>
       <Hero
         kruimels={[{ naam: "Werkgebied", pad: "/werkgebied" }]}
-        titel={`Particuliere thuiszorg in ${site.plaats}`}
-        lead={`Zoekt u zorg thuis in ${site.plaats}? Wij zijn een particuliere thuiszorgorganisatie met ${site.gezicht.jarenErvaring} jaar ervaring in de zorg. Wij bieden persoonlijke verzorging, nachtzorg, palliatieve zorg, respijtzorg en dagbesteding bij u thuis.`}
+        titel={`Ons werkgebied: ${site.plaats} en omgeving`}
+        lead={`Zoekt u zorg thuis in ${site.plaats}? Wij zijn een particuliere thuiszorgorganisatie met ${site.gezicht.jarenErvaring} jaar ervaring in de zorg. Wij bieden persoonlijke verzorging, nachtzorg, palliatieve zorg, respijtzorg en dagbesteding bij u thuis, in Almere en de steden eromheen.`}
         plek={`Er is op dit moment plek voor nieuwe cliënten in ${site.plaats}`}
         foto={FOTO.straat}
         badge={["dichtbij", `in ${site.plaats}`]}
@@ -42,6 +42,31 @@ export default function Werkgebied() {
             </div>
             <p className="sm">Staat uw wijk of plaats er niet bij? Bel gerust, dan kijken we samen wat er mogelijk is.</p>
           </div>
+        </div>
+      </section>
+
+      <section className="sec ruim" id="steden">
+        <div className="wrap col g32">
+          <div className="kopregel">
+            <h2 className="h2">Ook in de steden rond {site.plaats}</h2>
+            <span className="hand schuin">wij komen naar u toe</span>
+          </div>
+          <div className="steden">
+            {["Flevoland", "Noord-Holland", "Utrecht", "Gelderland"].map((prov) => {
+              const lijst = site.steden.filter((st) => st.provincie === prov);
+              return lijst.length ? (
+                <div key={prov} className="col g12">
+                  <b style={{ fontFamily: "var(--kop)", color: "var(--blauw)" }}>{prov}</b>
+                  <div className="pills">
+                    {lijst.map((st) => (
+                      <Link key={st.slug} className="pill" href={`/zorg/particuliere-thuiszorg/${st.slug}`}><Hart maat={15} />{st.naam}</Link>
+                    ))}
+                  </div>
+                </div>
+              ) : null;
+            })}
+          </div>
+          <p className="sm">Per stad leest u wat er lokaal speelt: waar u de Wmo regelt, welk ziekenhuis het dichtst bij is en in welke wijken wij komen. Staat uw plaats er niet bij? Bel gerust.</p>
         </div>
       </section>
 
@@ -83,7 +108,7 @@ export default function Werkgebied() {
         kop={`Veelgestelde vragen over thuiszorg in ${site.plaats}`}
         vragen={[
           { vraag: `In welke delen van ${site.plaats} biedt u zorg?`, antwoord: `In heel ${site.plaats}: Stad, Buiten, Haven, Poort en Hout.` },
-          { vraag: `Biedt u ook zorg buiten ${site.plaats}?`, antwoord: `Ons werkgebied is ${site.plaats}. Woont u net daarbuiten, neem dan gerust contact op.` },
+          { vraag: `Biedt u ook zorg buiten ${site.plaats}?`, antwoord: `Ja. Wij komen ook in ${site.steden.map((s) => s.naam).join(", ")}. Woont u net daarbuiten, bel dan gerust, dan kijken we samen wat er mogelijk is.` },
           { vraag: "Kan ik de zorg betalen met een pgb?", antwoord: "Ja. U kunt de zorg particulier betalen of vanuit een persoonsgebonden budget." },
           { vraag: "Wanneer bent u bereikbaar?", antwoord: "Op maandag tot en met vrijdag van 10:00 tot 17:00 uur. In het weekend alleen voor spoedaanvragen." },
         ]}

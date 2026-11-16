@@ -71,6 +71,28 @@ const werkgebied = [
   },
 ] as const;
 
+// Steden rond Almere met een eigen pagina onder de pillar
+// /zorg/particuliere-thuiszorg/[slug]. Lokale teksten en bronnen staan in
+// app/zorg/particuliere-thuiszorg/steden.ts (zelfde slug). Almere zelf heeft
+// geen stadspagina: dat is de homepage plus de dienst×Almere-pagina's.
+const steden = [
+  { naam: "Lelystad", slug: "lelystad", gemeente: "Lelystad", provincie: "Flevoland" },
+  { naam: "Zeewolde", slug: "zeewolde", gemeente: "Zeewolde", provincie: "Flevoland" },
+  { naam: "Dronten", slug: "dronten", gemeente: "Dronten", provincie: "Flevoland" },
+  { naam: "Huizen", slug: "huizen", gemeente: "Huizen", provincie: "Noord-Holland" },
+  { naam: "Blaricum", slug: "blaricum", gemeente: "Blaricum", provincie: "Noord-Holland" },
+  { naam: "Laren", slug: "laren", gemeente: "Laren", provincie: "Noord-Holland" },
+  { naam: "Eemnes", slug: "eemnes", gemeente: "Eemnes", provincie: "Utrecht" },
+  { naam: "Naarden", slug: "naarden", gemeente: "Gooise Meren", provincie: "Noord-Holland" },
+  { naam: "Bussum", slug: "bussum", gemeente: "Gooise Meren", provincie: "Noord-Holland" },
+  { naam: "Muiden", slug: "muiden", gemeente: "Gooise Meren", provincie: "Noord-Holland" },
+  { naam: "Hilversum", slug: "hilversum", gemeente: "Hilversum", provincie: "Noord-Holland" },
+  { naam: "Weesp", slug: "weesp", gemeente: "Amsterdam", provincie: "Noord-Holland" },
+  { naam: "Diemen", slug: "diemen", gemeente: "Diemen", provincie: "Noord-Holland" },
+  { naam: "Nijkerk", slug: "nijkerk", gemeente: "Nijkerk", provincie: "Gelderland" },
+  { naam: "Spakenburg", slug: "spakenburg", gemeente: "Bunschoten", provincie: "Utrecht" },
+] as const;
+
 const vastePaginas = [
   "/tarieven-en-vergoeding",
   "/over",
@@ -81,6 +103,10 @@ const vastePaginas = [
   "/privacy",
   "/klachtenregeling",
   "/algemene-voorwaarden",
+  "/zorg/particuliere-thuiszorg",
+  "/zorg/uurzorg",
+  "/zorg/blokzorg",
+  "/zorg/24-uurszorg",
 ];
 
 export const site = {
@@ -110,6 +136,7 @@ export const site = {
     ...werkgebied.flatMap((p) =>
       (p.diensten as readonly string[]).map((d) => `/zorg/${d}/${p.slug}`)
     ),
+    ...steden.map((s) => `/zorg/particuliere-thuiszorg/${s.slug}`),
   ] as readonly string[],
   // Lokaal ontwikkelen: post naar het lokale portaal i.p.v. productie.
   apiUrl:
@@ -158,7 +185,9 @@ export const site = {
   reviews: [] as readonly { tekst: string; voornaam: string; plaats: string; datum: string }[],
   diensten,
   werkgebied,
+  steden,
 } as const;
 
 export type Dienst = (typeof diensten)[number];
 export type Plaats = (typeof werkgebied)[number];
+export type Stad = (typeof steden)[number];

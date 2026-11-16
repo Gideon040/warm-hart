@@ -441,3 +441,32 @@ a.pill:hover { background: var(--blauw); color: var(--wit); }
   body { padding-bottom: 72px; }
 }
 @media (max-width: 760px) { .niet-mobiel { display: none !important; } }
+
+/* --- Uitklapmenu's in de navigatie --- */
+.uitklap { position: relative; display: flex; align-items: center; }
+.uitklap-kop { gap: 4px; }
+.pijltje { flex-shrink: 0; transition: transform .15s; }
+.uitklap-paneel {
+  position: absolute; left: -12px; top: 100%; z-index: 40; min-width: 520px;
+  display: none; gap: 28px; padding: 22px 24px; margin-top: 4px;
+  background: var(--wit); border-radius: 22px 6px 22px 6px; box-shadow: 0 18px 44px rgba(23, 50, 77, .16);
+}
+.uitklap-paneel.breed { min-width: 420px; }
+.uitklap-paneel::before { content: ""; position: absolute; left: 0; right: 0; top: -12px; height: 12px; }
+.uitklap:hover .uitklap-paneel, .uitklap:focus-within .uitklap-paneel { display: flex; }
+.uitklap:hover .pijltje, .uitklap:focus-within .pijltje { transform: rotate(180deg); }
+.uitklap-groep { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.uitklap-groep b { font-family: var(--kop); font-size: 13px; text-transform: uppercase; letter-spacing: .06em; color: var(--blauw); margin-bottom: 6px; }
+.nav-links .uitklap-groep a { min-height: 36px; padding: 0 8px; margin-left: -8px; border-radius: 10px 3px 10px 3px; font-weight: 600; }
+.nav-links .uitklap-groep a:hover { background: var(--licht); text-decoration: none; }
+.uitklap-raster { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0 12px; }
+@media (max-width: 1140px) {
+  .nav-uit .sub { border-bottom: 1px solid var(--licht); }
+  .nav-uit .sub summary { list-style: none; cursor: pointer; min-height: 44px; display: flex; align-items: center; justify-content: space-between; padding: 0 9px; font-family: var(--kop); font-weight: 600; font-size: 14.5px; color: var(--inkt); }
+  .nav-uit .sub summary::-webkit-details-marker { display: none; }
+  .nav-uit .sub summary::after { content: "▾"; color: var(--hart); font-size: 12px; }
+  .nav-uit .sub[open] summary::after { content: "▴"; }
+  .nav-uit .sub a { padding-left: 22px; font-weight: 500; border-bottom: 0; min-height: 40px; }
+  .nav-uit .nav-links { max-height: calc(100vh - 160px); overflow-y: auto; }
+}
+.steden { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr)); gap: 28px; }

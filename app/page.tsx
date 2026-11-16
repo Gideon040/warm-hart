@@ -127,8 +127,8 @@ export default async function Home() {
       <section id="werkgebied" className="sec licht">
         <div className="wrap duo" style={{ gap: "40px 64px" }}>
           <div className="col g18">
-            <h2 className="h2">Zorg in heel {plaats.naam}</h2>
-            <p className="tekst">Wij zijn gevestigd in {plaats.naam} en dus dichtbij. Twijfelt u of u binnen ons werkgebied woont? Neem gerust contact op.</p>
+            <h2 className="h2">Zorg in {plaats.naam} en omgeving</h2>
+            <p className="tekst">Wij zijn gevestigd in {plaats.naam} en dus dichtbij. Wij komen in heel {plaats.naam} en in de steden eromheen. Twijfelt u of u binnen ons werkgebied woont? Neem gerust contact op.</p>
             <div className="rij">
               <Link className="knop" href="/werkgebied">Ons werkgebied</Link>
               <Link className="knop rand" href="/contact">Contact opnemen</Link>
@@ -144,6 +144,14 @@ export default async function Home() {
               <div className="pills wit">
                 {site.diensten.map((d) => (
                   <Link key={d.slug} className="pill" href={`/zorg/${d.slug}/${plaats.slug}`}>{d.kort} in {plaats.naam}</Link>
+                ))}
+              </div>
+            </div>
+            <div className="col g12">
+              <b style={{ fontFamily: "var(--kop)", fontSize: 15.5 }}>Ook in de steden rond {plaats.naam}:</b>
+              <div className="pills wit">
+                {site.steden.map((s) => (
+                  <Link key={s.slug} className="pill" href={`/zorg/particuliere-thuiszorg/${s.slug}`}>{s.naam}</Link>
                 ))}
               </div>
             </div>

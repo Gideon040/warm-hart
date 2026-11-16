@@ -75,7 +75,7 @@ export default async function DienstPlaatsPagina({ params }: Props) {
   const plaatsFaq = [
     ...t.faq.slice(0, 3),
     { vraag: `In welke delen van ${plaats.naam} biedt u ${dienst.kort.toLowerCase()}?`, antwoord: `In heel ${plaats.naam}: ${opsomming(plaats.kernen)}.` },
-    { vraag: `Biedt u ook zorg buiten ${plaats.naam}?`, antwoord: `Ons werkgebied is ${site.werkgebied.map((w) => w.naam).join(", ")}. Woont u net daarbuiten, neem dan gerust contact op.` },
+    { vraag: `Biedt u ook zorg buiten ${plaats.naam}?`, antwoord: `Ja. Wij komen ook in de steden rond ${plaats.naam}, zoals ${site.steden.slice(0, 5).map((s) => s.naam).join(", ")} en meer. Kijk op onze pagina over het werkgebied, of bel gerust.` },
   ];
 
   const stappen = STAPPEN.map((s, i) =>

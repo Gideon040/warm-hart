@@ -41,10 +41,13 @@ const organisatieSchema = {
   "@type": ["LocalBusiness", "MedicalBusiness"],
   founder: { "@type": "Person", name: site.gezicht.naam, jobTitle: site.gezicht.functie },
   address: { "@type": "PostalAddress", addressLocality: site.plaats, addressRegion: "Flevoland", addressCountry: "NL" },
-  areaServed: site.werkgebied.flatMap((p) => [
-    { "@type": "City", name: p.naam },
-    ...p.kernen.map((k) => ({ "@type": "Place", name: k })),
-  ]),
+  areaServed: [
+    ...site.werkgebied.flatMap((p): { "@type": string; name: string }[] => [
+      { "@type": "City", name: p.naam },
+      ...p.kernen.map((k) => ({ "@type": "Place", name: k })),
+    ]),
+    ...site.steden.map((s) => ({ "@type": "City", name: s.naam })),
+  ],
   knowsLanguage: ["nl", "en", "srn"],
   openingHoursSpecification: [
     {

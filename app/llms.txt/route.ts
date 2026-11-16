@@ -1,5 +1,6 @@
 import { site } from "@/site.config";
 import { inhoud } from "../zorg/inhoud";
+import { zorgvormen } from "../zorg/zorgvormen";
 
 // llms.txt: korte, feitelijke samenvatting van de site voor AI-zoekmachines
 // (structuurspec 4.8: "Bron voor AI-zoekmachines"). Alles komt uit
@@ -17,7 +18,7 @@ export function GET() {
     "## Gegevens",
     `- Telefoon: ${site.telefoonWeergave} (${site.bereikbaarheid})`,
     `- E-mail: ${site.email}`,
-    `- Werkgebied: ${plaats.naam} (${plaats.kernen.join(", ")})`,
+    `- Werkgebied: ${plaats.naam} (${plaats.kernen.join(", ")}) en ${site.steden.map((st) => st.naam).join(", ")}`,
     `- KvK: ${site.kvk}, AGB-code: ${site.agb}${site.vog ? ", VOG aanwezig" : ""}`,
     `- Talen: ${g.talen.join(", ")}`,
     `- Omvang: ${site.omvang.join(", ")}`,
@@ -26,8 +27,15 @@ export function GET() {
     "## Zorg",
     ...site.diensten.map((d) => `- [${d.naam}](${site.url}/zorg/${d.slug}): ${inhoud[d.slug].lead}`),
     "",
+    "## Hoeveel zorg",
+    ...zorgvormen.map((z) => `- [${z.naam}](${site.url}/zorg/${z.slug}): ${z.lead}`),
+    `- [Particuliere thuiszorg](${site.url}/zorg/particuliere-thuiszorg)`,
+    "",
     `## Zorg in ${plaats.naam}`,
     ...site.diensten.map((d) => `- [${d.naam} in ${plaats.naam}](${site.url}/zorg/${d.slug}/${plaats.slug})`),
+    "",
+    `## Steden rond ${plaats.naam}`,
+    ...site.steden.map((st) => `- [Particuliere thuiszorg in ${st.naam}](${site.url}/zorg/particuliere-thuiszorg/${st.slug})`),
     "",
     "## Informatie",
     `- [Tarieven en vergoeding](${site.url}/tarieven-en-vergoeding): tarieven op aanvraag, vooraf schriftelijk; particulier of pgb.`,

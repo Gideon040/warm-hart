@@ -17,8 +17,9 @@ npm run build   # productie, post naar app.zorgbaar.nl
   `app/bedankt`, `app/kennisbank`, `app/sitemap.ts`, `app/robots.ts`.
 - Afbeeldingen: de 20 ontwerpbeelden als WebP (max. 1800px) in `public/images`.
 
-## Pagina's (27)
-Home, 5 dienstpagina's, 5 dienst×Almere-pagina's, tarieven-en-vergoeding, over, zorgvraag,
+## Pagina's (46 + bedankt/404)
+Home, 5 dienstpagina's, 5 dienst×Almere-pagina's, 3 zorgvorm-pagina's (uurzorg, blokzorg,
+24-uurszorg), pillar /zorg/particuliere-thuiszorg met 15 stadspagina's, tarieven-en-vergoeding, over, zorgvraag,
 contact, werkgebied, veelgestelde-vragen, privacy, klachtenregeling, algemene-voorwaarden,
 kennisbank (+ artikelen uit het portaal), bedankt, 404.
 
@@ -36,9 +37,18 @@ kennisbank (+ artikelen uit het portaal), bedankt, 404.
 - Gecontroleerd met een crawl: alle pagina's 200, één H1, geen ontbrekende alt-teksten,
   geen kapotte interne links, sitemap compleet.
 
+## Stadspagina's
+Volgens `D:\het-reinhart-huis\schrijfwijzer-locatiepaginas.md`: pillar + per stad één pagina
+`/zorg/particuliere-thuiszorg/[stad]` met een lokale laag (Wmo-loket, ziekenhuis, wijken,
+eigen invalshoek, voorbereiding, lokale FAQ) en bronvermelding. Steden in `site.config.ts`
+(`steden`), teksten in `app/zorg/particuliere-thuiszorg/steden.ts`. Bronnen: lokaal onderzoek
+van Het Reinhart Huis (9 steden) en nieuw onderzoek (Lelystad, Dronten, Blaricum, Laren,
+Muiden, Hilversum). Overlaptest gedaan: alleen de vaste blokken (stappen, pgb, CTA) herhalen.
+Let op: Het Reinhart Huis (ook Zorgbaar) bedient deels dezelfde steden.
+
 ## Beslissingen
-- Werkgebied = alleen Almere (zoals in het ontwerp). De vijf stadsdelen zijn kernen van die ene
-  plaats, geen losse plaatspagina's (te dun, doorway-risico). Extra plaats = één regel in `werkgebied`.
+- Almere: homepage + dienst×Almere-pagina's; de vijf stadsdelen zijn kernen, geen losse pagina's
+  (doorway-risico). Steden rond Almere: zie Stadspagina's.
 - Geen verpleging-pagina: geen BIG-registratie bekend (regel 6.6).
 - Nachtzorg is één pagina met H2 Waakdienst en H2 Slaapdienst (regel 6.2).
 - Alleen particulier en pgb als vergoedingsroutes (dat noemt het ontwerp).
@@ -59,3 +69,6 @@ kennisbank (+ artikelen uit het portaal), bedankt, 404.
 8. Eigen zin van Anushka over Almere (`werkgebied[0].eigenZin`) en eventueel een portretfoto.
 9. Tarieven per dienst, als ze die wil tonen.
 10. 4 startartikelen kennisbank aanmaken in het portaal.
+11. Bevestigen: komt Anushka echt in alle 15 steden? Zo niet, de stad uit `steden` halen.
+12. Bevestigen: hoe wordt 24-uurszorg bemand (alleen, met collega's, inwonend)?
+13. Per stad een eigen zin van Anushka zou de pagina's nog sterker maken.
