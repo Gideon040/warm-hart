@@ -237,6 +237,27 @@ export function Waarden() {
   );
 }
 
+// Buiten Almere: eerlijk vooraf wat er kan (minimale omvang, kennismaking op
+// afstand), met de reden erbij. Instelling: site.buitenAlmere.
+export function BuitenAlmere({ plaats }: { plaats: string }) {
+  const b = site.buitenAlmere;
+  return (
+    <section className="sec">
+      <div className="wrap">
+        <div className="citaat-kaart buiten-almere" id="zo-werkt-het">
+          <h2 className="h3">Zo werkt het in {plaats}</h2>
+          <p className="tekst">
+            Wij komen in {plaats} vanaf <b>{b.minimum}</b>. Voor kortere bezoeken is de reistijd vanuit {site.plaats} te
+            lang om u een vast gezicht te kunnen bieden. De kennismaking doen wij eerst {b.kennismaking}. Start de zorg,
+            dan komen wij bij u thuis.
+          </p>
+          <p className="sm">Twijfelt u of uw zorgvraag past? Bel of stuur uw vraag gewoon in, dan kijken we samen wat er kan.</p>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export const STAPPEN = [
   { kop: "U belt of mailt", tekst: "Vertel kort wat er speelt. Wij denken direct met u mee." },
   { kop: "Kennismaken bij u thuis", tekst: "We bespreken uw wensen en gewoontes, in alle rust." },

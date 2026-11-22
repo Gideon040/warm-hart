@@ -48,6 +48,8 @@ export default function ZorgvraagWizard() {
   });
   const [plaats, setPlaats] = useState("");
   const [anderePlaats, setAnderePlaats] = useState("");
+  // Steden rond Almere: andere afspraken (site.buitenAlmere).
+  const buitenAlmere = site.steden.some((st) => st.naam === plaats);
   const [postcode, setPostcode] = useState("");
   const [wanneer, setWanneer] = useState("");
   const [uren, setUren] = useState(UREN[0]);
@@ -81,6 +83,7 @@ export default function ZorgvraagWizard() {
       gekozen.length > 1 ? `Gekozen zorg: ${gekozen.map((d) => d.naam).join(", ")}.` : "",
       w && !w.urgentie ? `Start: ${w.label.toLowerCase()} (${w.sub.toLowerCase()}).` : "",
       plaats === ANDERS ? "Plaats valt buiten het vaste werkgebied." : "",
+      buitenAlmere ? `Plaats buiten ${site.plaats}: zorg vanaf ${site.buitenAlmere.minimum}, kennismaking eerst ${site.buitenAlmere.kennismaking}.` : "",
       toelichting.trim(),
     ].filter(Boolean);
     try {
@@ -165,7 +168,11 @@ export default function ZorgvraagWizard() {
             ))}
           </div>
           {plaats && plaats !== ANDERS && (
-            <div className="melding">{plaats} ligt in ons werkgebied. Wij komen graag bij u langs voor een kennismaking.</div>
+            <div className={buitenAlmere ? "melding let" : "melding"}>
+              {buitenAlmere
+                ? `${plaats} ligt in ons werkgebied. Buiten ${site.plaats} komen wij vanaf ${site.buitenAlmere.minimum}; de kennismaking doen wij eerst ${site.buitenAlmere.kennismaking}. Uw vraag versturen mag altijd.`
+                : `${plaats} ligt in ons werkgebied. Wij komen graag bij u langs voor een kennismaking.`}
+            </div>
           )}
           {plaats === ANDERS && (
             <>

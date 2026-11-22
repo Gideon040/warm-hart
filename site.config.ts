@@ -162,6 +162,13 @@ export const site = {
   financiering: ["Particulier", "Pgb"],
   // Plaats-links (home, werkgebied, footer) gaan naar deze dienst×plaats.
   hoofddienst: "persoonlijke-verzorging",
+  // Buiten Almere (de steden van "steden"): zorg pas vanaf een minimale
+  // omvang, kennismaking eerst op afstand (reistijd). In Almere: alles vanaf
+  // 3 uur per keer en kennismaking aan huis. Eén plek om dit te wijzigen.
+  buitenAlmere: {
+    minimum: "4 uur per keer",
+    kennismaking: "telefonisch of via een videogesprek",
+  },
   omvang: ["Vanaf 3 uur zorg (korter op aanvraag)", "Blokzorg", "4-uurs zorg", "12-uurs zorg", "24-uurs zorg"],
   gezicht: {
     naam: "Anushka Young",

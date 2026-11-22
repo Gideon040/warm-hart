@@ -64,7 +64,7 @@ export default function Contact() {
             <h2 className="h2" style={{ fontSize: 24 }}>Wat gebeurt er daarna?</h2>
             <HartLijst items={[
               "Wij bellen of mailen u terug om uw vraag te bespreken",
-              "We plannen een kennismaking bij u thuis",
+              `In ${site.plaats} plannen we een kennismaking bij u thuis, daarbuiten eerst ${site.buitenAlmere.kennismaking}`,
               "Samen maken we afspraken over de zorg en de tijden",
             ]} />
             <Plek />

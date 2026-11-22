@@ -4,6 +4,9 @@
 // openingszin, invalshoek, voorbereiding en FAQ: geen twee pagina's mogen
 // hetzelfde zeggen met alleen de plaatsnaam verwisseld.
 import type { Vraag } from "@/components/Blokken";
+import { site } from "@/site.config";
+
+const MIN = site.buitenAlmere.minimum;
 
 export interface StadInhoud {
   kernen: string[];
@@ -89,7 +92,7 @@ export const steden: Record<string, StadInhoud> = {
     hoekKop: "Eemnes: Utrecht, maar het loket zit in het Gooi",
     hoek: [
       "Eemnes hoort bij de provincie Utrecht, maar werkt samen met Blaricum en Laren in de BEL Combinatie. De Wmo wordt uitgevoerd door Maatschappelijke Zaken HBEL in Huizen, in Noord-Holland. Een inwoner van Eemnes regelt zijn Wmo dus via een loket over de provinciegrens.",
-      "Dat maakt het voor families soms onoverzichtelijk. Bij particuliere zorg heeft u daar geen last van: u belt ons, wij maken kennis bij u thuis en spreken samen af wat er nodig is. Heeft u al een pgb via HBEL, dan kunt u ons daaruit betalen.",
+      "Dat maakt het voor families soms onoverzichtelijk. Bij particuliere zorg heeft u daar geen last van: u belt ons, wij maken kennis en spreken samen af wat er nodig is. Heeft u al een pgb via HBEL, dan kunt u ons daaruit betalen.",
     ],
     wmo: "De Wmo regelt u in Eemnes via Maatschappelijke Zaken HBEL in Huizen, dat werkt voor Huizen, Blaricum, Eemnes en Laren.",
     ziekenhuis: "Tergooi MC in Hilversum",
@@ -139,7 +142,7 @@ export const steden: Record<string, StadInhoud> = {
     faq: [
       { vraag: "Kan ik in Diemen een pgb gebruiken voor jullie zorg?", antwoord: "Ja. De gemeente Diemen biedt de Wmo ook als pgb. Met een pgb kiest u zelf uw zorgverlener en kunt u ons daaruit betalen." },
       { vraag: "In welke wijken van Diemen komen jullie?", antwoord: "In heel Diemen: Diemen-Noord, het Centrum, Plantage de Sniep, Diemen-Zuid, Holland Park en Bergwijkpark." },
-      { vraag: "Ik woon alleen. Kunnen jullie ook alleen 's avonds komen?", antwoord: "Ja. Zorg kan vanaf 3 uur per keer, ook alleen in de avond, bijvoorbeeld om samen de dag af te sluiten en te helpen bij het naar bed gaan." },
+      { vraag: "Ik woon alleen. Kunnen jullie ook alleen 's avonds komen?", antwoord: `Ja. Zorg kan vanaf ${MIN}, ook alleen in de avond, bijvoorbeeld om samen de dag af te sluiten en te helpen bij het naar bed gaan.` },
     ],
     bronnen: ["CBS via AlleCijfers.nl, peildatum 1-1-2026", "Gemeente Diemen, Team Wmo en Jeugd", "OLVG"],
   },
@@ -306,7 +309,7 @@ export const steden: Record<string, StadInhoud> = {
     faq: [
       { vraag: "Komen jullie ook in Krijgsman?", antwoord: "Ja. Wij komen in heel Muiden: de Vesting, Krijgsman, Mariahoeve en de Pampusweg." },
       { vraag: "Muiden hoort bij Gooise Meren. Waar vraag ik de Wmo aan?", antwoord: "Bij de gemeente Gooise Meren, met het gemeentehuis in Bussum. Voor particuliere zorg bij ons is geen indicatie nodig; u belt ons direct." },
-      { vraag: "Kunnen jullie een vast moment in de week overnemen?", antwoord: "Ja. Zorg kan vanaf 3 uur per keer, of als blok van 4 uur, bijvoorbeeld zodat u als mantelzorger een middag vrij bent." },
+      { vraag: "Kunnen jullie een vast moment in de week overnemen?", antwoord: `Ja. Zorg kan vanaf ${MIN}, bijvoorbeeld zodat u als mantelzorger een middag vrij bent.` },
     ],
     bronnen: ["CBS via AlleCijfers.nl, peildatum 1-1-2026", "Gemeente Gooise Meren, zorg en ondersteuning (2026)"],
   },
@@ -326,7 +329,7 @@ export const steden: Record<string, StadInhoud> = {
     voorbereiding: "Woont uw naaste alleen in Hilversum? Spreek dan met de buren of een vriend af dat zij u bellen als er iets opvalt. Samen met onze vaste momenten ontstaat zo een vangnet om uw naaste heen.",
     faq: [
       { vraag: "In welke delen van Hilversum komen jullie?", antwoord: "In heel Hilversum: het Centrum, Noord, Oost, Zuid, de Hilversumse Meent en het landelijk gebied." },
-      { vraag: "Mijn vader woont alleen. Kunnen jullie elke dag komen?", antwoord: "Ja. Zorg kan elke dag als dat nodig is, ook in het weekend, vanaf 3 uur per keer. Een korter bezoek, bijvoorbeeld 1 uur, is op aanvraag mogelijk. Wij houden u op de hoogte als ons iets opvalt." },
+      { vraag: "Mijn vader woont alleen. Kunnen jullie elke dag komen?", antwoord: `Ja. Zorg kan elke dag als dat nodig is, ook in het weekend, vanaf ${MIN}. Wij houden u op de hoogte als ons iets opvalt.` },
       { vraag: "Werken jullie samen met de huisarts in Hilversum?", antwoord: "Ja. Wij stemmen graag af met de huisarts en met andere zorgverleners die al betrokken zijn." },
     ],
     bronnen: ["CBS via AlleCijfers.nl, peildatum 1-1-2026", "Gemeente Hilversum, Hulp bij u thuis (2026)", "NH Nieuws, nieuwbouw Tergooi (2023)", "Huisartsen Spoedpost Hilversum (2026)", "ZorgkaartNederland, Hospice Kajan (2026)"],

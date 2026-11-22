@@ -20,6 +20,7 @@ const GROEPEN: { kop: string; vragen: Vraag[] }[] = [
       { vraag: "Wat kost een uur zorg?", antwoord: "Het tarief hangt af van de zorg en de tijden. U hoort het vooraf, zodat u niet voor verrassingen komt te staan." },
       { vraag: "Heb ik een indicatie nodig?", antwoord: "Voor particuliere zorg niet. Voor een pgb wel: die indicatie komt van de gemeente, het CIZ of een wijkverpleegkundige, afhankelijk van de route." },
       { vraag: "Wat is de minimale afname?", antwoord: "Zorg is mogelijk vanaf 3 uur per keer. Een korter bezoek, bijvoorbeeld 1 uur, is op aanvraag mogelijk." },
+      { vraag: `Komen jullie ook buiten ${site.plaats}?`, antwoord: `Ja, in de steden rond ${site.plaats}, vanaf ${site.buitenAlmere.minimum}. Voor kortere bezoeken is de reistijd te lang om een vast gezicht te bieden. In ${site.plaats} maken wij kennis bij u thuis; daarbuiten eerst ${site.buitenAlmere.kennismaking}.` },
     ],
   },
   {

@@ -51,6 +51,9 @@ export default function Werkgebied() {
             <h2 className="h2">Ook in de steden rond {site.plaats}</h2>
             <span className="hand schuin">wij komen naar u toe</span>
           </div>
+          <p className="tekst" style={{ maxWidth: 720 }}>
+            In {site.plaats} komt alle zorg vanaf 3 uur per keer en maken wij kennis bij u thuis. In de steden rond {site.plaats} komen wij vanaf {site.buitenAlmere.minimum}, omdat de reistijd voor kortere bezoeken te lang is. De kennismaking doen wij daar eerst {site.buitenAlmere.kennismaking}.
+          </p>
           <div className="steden">
             {["Flevoland", "Noord-Holland", "Utrecht", "Gelderland"].map((prov) => {
               const lijst = site.steden.filter((st) => st.provincie === prov);
@@ -108,7 +111,7 @@ export default function Werkgebied() {
         kop={`Veelgestelde vragen over thuiszorg in ${site.plaats}`}
         vragen={[
           { vraag: `In welke delen van ${site.plaats} biedt u zorg?`, antwoord: `In heel ${site.plaats}: Stad, Buiten, Haven, Poort en Hout.` },
-          { vraag: `Biedt u ook zorg buiten ${site.plaats}?`, antwoord: `Ja. Wij komen ook in ${site.steden.map((s) => s.naam).join(", ")}. Woont u net daarbuiten, bel dan gerust, dan kijken we samen wat er mogelijk is.` },
+          { vraag: `Biedt u ook zorg buiten ${site.plaats}?`, antwoord: `Ja. Wij komen ook in ${site.steden.map((s) => s.naam).join(", ")}. Buiten ${site.plaats} komen wij vanaf ${site.buitenAlmere.minimum}, en de kennismaking doen wij eerst ${site.buitenAlmere.kennismaking}. Woont u net daarbuiten, bel dan gerust, dan kijken we samen wat er mogelijk is.` },
           { vraag: "Kan ik de zorg betalen met een pgb?", antwoord: "Ja. U kunt de zorg particulier betalen of vanuit een persoonsgebonden budget." },
           { vraag: "Wanneer bent u bereikbaar?", antwoord: "Op maandag tot en met vrijdag van 10:00 tot 17:00 uur. In het weekend alleen voor spoedaanvragen." },
         ]}

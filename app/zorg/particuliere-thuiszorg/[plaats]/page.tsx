@@ -4,7 +4,7 @@ import { site } from "@/site.config";
 import { dienstSchema } from "@/lib/schema";
 import { paginaMeta } from "@/components/meta";
 import {
-  BelBlok, BelKnop, DuoCta, Faq, FotoBoog, Hart, HartLijst, Hero, JsonLd, Stappen, STAPPEN, ZorgvraagKnop,
+  BelBlok, BelKnop, BuitenAlmere, DuoCta, Faq, FotoBoog, Hart, HartLijst, Hero, JsonLd, Stappen, STAPPEN, ZorgvraagKnop,
 } from "@/components/Blokken";
 import { FOTO, type Foto } from "@/components/fotos";
 import { zorgvormen } from "../../zorgvormen";
@@ -52,17 +52,25 @@ export default async function StadPagina({ params }: Props) {
   const andere = site.steden.filter((s) => s.slug !== stad.slug && steden[s.slug]);
 
   const stappen = STAPPEN.map((s, n) =>
-    n === 1 ? { kop: s.kop, tekst: `We komen bij u thuis in ${stad.naam} en bespreken uw wensen en gewoontes, in alle rust.` } : s
+    n === 1
+      ? { kop: "Kennismaken op afstand", tekst: `We spreken elkaar ${site.buitenAlmere.kennismaking} en bespreken uw wensen en gewoontes, in alle rust.` }
+      : n === 3
+        ? { kop: s.kop, tekst: `Wij komen bij u thuis in ${stad.naam}, vanaf ${site.buitenAlmere.minimum}, met een vast gezicht.` }
+        : s
   );
 
   const faq = [
     ...t.faq,
     {
+      vraag: `Komen jullie ook voor een kort bezoek naar ${stad.naam}?`,
+      antwoord: `In ${stad.naam} komen wij vanaf ${site.buitenAlmere.minimum}. Voor kortere bezoeken is de reistijd te lang om u een vast gezicht te bieden. De kennismaking doen wij eerst ${site.buitenAlmere.kennismaking}; start de zorg, dan komen wij bij u thuis.`,
+    },
+    {
       vraag: `Wat kost particuliere thuiszorg in ${stad.naam}?`,
       antwoord: [
-        `Het tarief hangt af van de zorg, de tijden en de omvang. U hoort het vooraf, na de kennismaking bij u thuis in ${stad.naam}. U betaalt particulier of vanuit een pgb.`,
+        `Het tarief hangt af van de zorg, de tijden en de omvang. U hoort het vooraf, na de kennismaking. U betaalt particulier of vanuit een pgb.`,
         `Dat verschilt per situatie: welke zorg, hoe vaak en op welke tijden. Na de kennismaking in ${stad.naam} krijgt u het tarief op papier. Betalen kan particulier of met een pgb.`,
-        `Er is geen vast bedrag, omdat geen zorgvraag hetzelfde is. Na een vrijblijvend gesprek bij u thuis in ${stad.naam} hoort u wat de zorg kost. U betaalt zelf of vanuit een pgb.`,
+        `Er is geen vast bedrag, omdat geen zorgvraag hetzelfde is. Na een vrijblijvend kennismakingsgesprek hoort u wat de zorg kost. U betaalt zelf of vanuit een pgb.`,
       ][i % 3],
     },
   ];
@@ -139,7 +147,7 @@ export default async function StadPagina({ params }: Props) {
             <h2 className="h2" id="waarom-wij">Waarom mensen in {stad.naam} ons bellen</h2>
             <HartLijst vet items={[
               `Een vast gezicht in ${stad.naam}, ook in het weekend`,
-              "Echte tijd per bezoek, vanaf 3 uur",
+              `Echte tijd per bezoek: in ${stad.naam} vanaf ${site.buitenAlmere.minimum}`,
               `Ervaring met complexere zorg: ${site.gezicht.specialisaties.slice(0, 3).join(", ").toLowerCase()}`,
               ...(site.directPlek ? ["Er is nu plek, u hoeft niet op een wachtlijst"] : []),
             ]} />
@@ -148,6 +156,8 @@ export default async function StadPagina({ params }: Props) {
           </div>
         </div>
       </section>
+
+      <BuitenAlmere plaats={stad.naam} />
 
       <Stappen kop={`Zo start de zorg in ${stad.naam}`} stappen={stappen} />
 

@@ -64,7 +64,7 @@ export default function Tarieven() {
             <h3 className="h3">Zo gaan wij te werk</h3>
             <HartLijst items={[
               "Een vrijblijvend eerste gesprek",
-              "Kennismaken bij u thuis",
+              `Kennismaken bij u thuis in ${site.plaats}`,
               "Een vast gezicht",
               "Duidelijke afspraken over dagen, tijden en tarief",
             ]} />

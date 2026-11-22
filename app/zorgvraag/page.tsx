@@ -24,7 +24,7 @@ export default function Zorgvraag() {
             <p className="lead">Vijf korte stappen. U hoeft geen medische gegevens in te vullen. Wij nemen zo snel mogelijk contact met u op, {site.bereikbaarKort}.</p>
             <HartLijst vet items={[
               "Vrijblijvend, u zit nergens aan vast",
-              "Kennismaken bij u thuis",
+              `Kennismaken bij u thuis in ${site.plaats}`,
               `Uw gegevens gaan alleen naar ${site.naam}`,
             ]} />
             <a className="belkaart niet-mobiel" href={telLink()} style={{ background: "var(--wit)" }}>
