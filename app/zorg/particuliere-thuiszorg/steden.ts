@@ -139,7 +139,7 @@ export const steden: Record<string, StadInhoud> = {
     faq: [
       { vraag: "Kan ik in Diemen een pgb gebruiken voor jullie zorg?", antwoord: "Ja. De gemeente Diemen biedt de Wmo ook als pgb. Met een pgb kiest u zelf uw zorgverlener en kunt u ons daaruit betalen." },
       { vraag: "In welke wijken van Diemen komen jullie?", antwoord: "In heel Diemen: Diemen-Noord, het Centrum, Plantage de Sniep, Diemen-Zuid, Holland Park en Bergwijkpark." },
-      { vraag: "Ik woon alleen. Kunnen jullie ook alleen 's avonds komen?", antwoord: "Ja. Zorg kan al vanaf 1 uur per keer, ook alleen in de avond, bijvoorbeeld om samen de dag af te sluiten en te helpen bij het naar bed gaan." },
+      { vraag: "Ik woon alleen. Kunnen jullie ook alleen 's avonds komen?", antwoord: "Ja. Zorg kan vanaf 3 uur per keer, ook alleen in de avond, bijvoorbeeld om samen de dag af te sluiten en te helpen bij het naar bed gaan." },
     ],
     bronnen: ["CBS via AlleCijfers.nl, peildatum 1-1-2026", "Gemeente Diemen, Team Wmo en Jeugd", "OLVG"],
   },
@@ -159,7 +159,7 @@ export const steden: Record<string, StadInhoud> = {
     voorbereiding: "Woont u in het buitengebied van Zeewolde? Vertel ons dan bij het eerste gesprek hoe uw huis bereikbaar is en waar we kunnen parkeren. Kleine dingen, maar ze maken de planning voor ons en voor u een stuk rustiger.",
     faq: [
       { vraag: "Komen jullie ook in het buitengebied van Zeewolde?", antwoord: "Ja. Wij komen in het dorp en in het buitengebied. Bel ons gerust, dan bespreken we samen de tijden die passen." },
-      { vraag: "Er is in Zeewolde maar één woonzorgcentrum. Kan zorg thuis een alternatief zijn?", antwoord: "Voor veel mensen wel. Van een uur zorg tot 24-uurszorg is mogelijk, zodat u thuis kunt blijven. Voor de zwaarste zorgvraag bespreken wij eerlijk wat thuis kan en wat niet." },
+      { vraag: "Er is in Zeewolde maar één woonzorgcentrum. Kan zorg thuis een alternatief zijn?", antwoord: "Voor veel mensen wel. Van een paar uur zorg tot 24-uurszorg is mogelijk, zodat u thuis kunt blijven. Voor de zwaarste zorgvraag bespreken wij eerlijk wat thuis kan en wat niet." },
       { vraag: "Kan ik de zorg in Zeewolde betalen met een pgb?", antwoord: "Ja. De gemeente Zeewolde biedt de keuze tussen zorg in natura en een pgb. Met een pgb kunt u ons betalen." },
     ],
     bronnen: ["CBS via AlleCijfers.nl, peildatum 1-1-2026", "Gemeente Zeewolde, zorgloket", "St Jansdal"],
@@ -285,7 +285,7 @@ export const steden: Record<string, StadInhoud> = {
     voorbereiding: "Woont uw vader of moeder al lang in hetzelfde huis in Laren? Loop dan samen eens door het huis en kijk waar het lastig wordt: de trap, de douche, de drempel naar de tuin. Dat lijstje is een goed begin van ons eerste gesprek.",
     faq: [
       { vraag: "In welke buurten van Laren komen jullie?", antwoord: "In heel Laren: het Centrum, de Omloop, Oostereng, het Postiljon, Zevenend, de Zwarte Berg en de rest van het dorp." },
-      { vraag: "Kunnen jullie helpen zodat mijn ouder thuis kan blijven wonen?", antwoord: "Dat is precies waar wij voor zijn. Van een uur zorg per dag tot 24-uurszorg, met een vast gezicht. Wat thuis kan en wat niet, bespreken wij eerlijk." },
+      { vraag: "Kunnen jullie helpen zodat mijn ouder thuis kan blijven wonen?", antwoord: "Dat is precies waar wij voor zijn. Van een paar uur zorg per dag tot 24-uurszorg, met een vast gezicht. Wat thuis kan en wat niet, bespreken wij eerlijk." },
       { vraag: "Moet ik in Laren eerst langs het Wmo-loket?", antwoord: "Alleen als u Wmo-ondersteuning of een Wmo-pgb wilt; dat loopt via Maatschappelijke Zaken in Huizen. Particuliere zorg bij ons kunt u direct regelen, zonder indicatie." },
     ],
     bronnen: ["CBS via AlleCijfers.nl, peildatum 1-1-2026", "Maatschappelijke Zaken HBEL (2026)", "Gemeente Laren (2026)", "Rosa Spier Huis, Wikipedia (2026)"],
@@ -306,7 +306,7 @@ export const steden: Record<string, StadInhoud> = {
     faq: [
       { vraag: "Komen jullie ook in Krijgsman?", antwoord: "Ja. Wij komen in heel Muiden: de Vesting, Krijgsman, Mariahoeve en de Pampusweg." },
       { vraag: "Muiden hoort bij Gooise Meren. Waar vraag ik de Wmo aan?", antwoord: "Bij de gemeente Gooise Meren, met het gemeentehuis in Bussum. Voor particuliere zorg bij ons is geen indicatie nodig; u belt ons direct." },
-      { vraag: "Kunnen jullie een vast moment in de week overnemen?", antwoord: "Ja. Zorg kan al vanaf 1 uur per keer, of als blok van 4 uur, bijvoorbeeld zodat u als mantelzorger een middag vrij bent." },
+      { vraag: "Kunnen jullie een vast moment in de week overnemen?", antwoord: "Ja. Zorg kan vanaf 3 uur per keer, of als blok van 4 uur, bijvoorbeeld zodat u als mantelzorger een middag vrij bent." },
     ],
     bronnen: ["CBS via AlleCijfers.nl, peildatum 1-1-2026", "Gemeente Gooise Meren, zorg en ondersteuning (2026)"],
   },
@@ -326,7 +326,7 @@ export const steden: Record<string, StadInhoud> = {
     voorbereiding: "Woont uw naaste alleen in Hilversum? Spreek dan met de buren of een vriend af dat zij u bellen als er iets opvalt. Samen met onze vaste momenten ontstaat zo een vangnet om uw naaste heen.",
     faq: [
       { vraag: "In welke delen van Hilversum komen jullie?", antwoord: "In heel Hilversum: het Centrum, Noord, Oost, Zuid, de Hilversumse Meent en het landelijk gebied." },
-      { vraag: "Mijn vader woont alleen. Kunnen jullie elke dag even komen?", antwoord: "Ja. Zorg kan al vanaf 1 uur per keer, elke dag als dat nodig is, ook in het weekend. Wij houden u op de hoogte als ons iets opvalt." },
+      { vraag: "Mijn vader woont alleen. Kunnen jullie elke dag komen?", antwoord: "Ja. Zorg kan elke dag als dat nodig is, ook in het weekend, vanaf 3 uur per keer. Een korter bezoek, bijvoorbeeld 1 uur, is op aanvraag mogelijk. Wij houden u op de hoogte als ons iets opvalt." },
       { vraag: "Werken jullie samen met de huisarts in Hilversum?", antwoord: "Ja. Wij stemmen graag af met de huisarts en met andere zorgverleners die al betrokken zijn." },
     ],
     bronnen: ["CBS via AlleCijfers.nl, peildatum 1-1-2026", "Gemeente Hilversum, Hulp bij u thuis (2026)", "NH Nieuws, nieuwbouw Tergooi (2023)", "Huisartsen Spoedpost Hilversum (2026)", "ZorgkaartNederland, Hospice Kajan (2026)"],

@@ -93,7 +93,7 @@ export default function Tarieven() {
               </div>
             ))}
           </div>
-          <Omvang label="Van een uur tot de hele dag:" />
+          <Omvang label="Van 3 uur tot de hele dag:" />
         </div>
       </section>
 
@@ -109,7 +109,7 @@ export default function Tarieven() {
         kop="Veelgestelde vragen over kosten"
         vragen={[
           { vraag: "Wat kost een uur zorg?", antwoord: "Het tarief hangt af van de zorg en de tijden, overdag, in de nacht of in het weekend. U hoort het vooraf, zodat u niet voor verrassingen komt te staan." },
-          { vraag: "Wat is de minimale afname?", antwoord: "Zorg is mogelijk vanaf 1 uur per keer. Daarnaast bieden wij blokzorg, 4-uurs, 12-uurs en 24-uurszorg." },
+          { vraag: "Wat is de minimale afname?", antwoord: "Zorg is mogelijk vanaf 3 uur per keer. Een korter bezoek, bijvoorbeeld 1 uur, is op aanvraag mogelijk. Daarnaast bieden wij blokzorg, 4-uurs, 12-uurs en 24-uurszorg." },
           { vraag: "Kan ik de zorg betalen met een pgb?", antwoord: "Ja. U kunt de zorg particulier betalen of vanuit een persoonsgebonden budget." },
           { vraag: "Heb ik een indicatie nodig?", antwoord: "Voor particuliere zorg niet. Voor een pgb wel: die indicatie komt van de gemeente, het CIZ of een wijkverpleegkundige, afhankelijk van de route." },
           { vraag: "Zit ik ergens aan vast als ik contact opneem?", antwoord: "Nee. Een eerste gesprek is vrijblijvend." },

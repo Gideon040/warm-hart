@@ -139,7 +139,7 @@ export default async function StadPagina({ params }: Props) {
             <h2 className="h2" id="waarom-wij">Waarom mensen in {stad.naam} ons bellen</h2>
             <HartLijst vet items={[
               `Een vast gezicht in ${stad.naam}, ook in het weekend`,
-              "Echte tijd per bezoek, al vanaf 1 uur",
+              "Echte tijd per bezoek, vanaf 3 uur",
               `Ervaring met complexere zorg: ${site.gezicht.specialisaties.slice(0, 3).join(", ").toLowerCase()}`,
               ...(site.directPlek ? ["Er is nu plek, u hoeft niet op een wachtlijst"] : []),
             ]} />

@@ -69,7 +69,7 @@ export default async function DienstPagina({ params }: Props) {
           <div className="citaat-kaart" style={{ flexBasis: 380 }}>
             <h3 className="h3">Voor wie?</h3>
             <p className="tekst">{t.voorWie}</p>
-            <h3 className="h3" style={{ marginTop: 6 }}>Van een uur tot de hele dag</h3>
+            <h3 className="h3" style={{ marginTop: 6 }}>Van 3 uur tot de hele dag</h3>
             <div className="pills">{site.omvang.map((o) => <span key={o} className="pill" style={{ background: "var(--wit)" }}>{o}</span>)}</div>
             <div className="plek"><Hart />Ook in het weekend</div>
           </div>

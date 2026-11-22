@@ -162,7 +162,7 @@ export const site = {
   financiering: ["Particulier", "Pgb"],
   // Plaats-links (home, werkgebied, footer) gaan naar deze dienst×plaats.
   hoofddienst: "persoonlijke-verzorging",
-  omvang: ["Vanaf 1 uur zorg", "Blokzorg", "4-uurs zorg", "12-uurs zorg", "24-uurs zorg"],
+  omvang: ["Vanaf 3 uur zorg (korter op aanvraag)", "Blokzorg", "4-uurs zorg", "12-uurs zorg", "24-uurs zorg"],
   gezicht: {
     naam: "Anushka Young",
     voornaam: "Anushka",

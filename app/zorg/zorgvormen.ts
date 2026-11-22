@@ -1,6 +1,7 @@
 // Zorgvormen naar omvang: hoeveel zorg en hoe lang achter elkaar. Dit staat
 // los van de diensten (wat voor zorg). Alleen wat uit het ontwerp vaststaat:
-// vanaf 1 uur, blokzorg, 4-uurs, 12-uurs en 24-uurszorg, ook in het weekend.
+// vanaf 3 uur per keer (korter op aanvraag), blokzorg, 4-uurs, 12-uurs en
+// 24-uurszorg, ook in het weekend.
 // Geen tarieven, geen beloftes over bezetting die niet uit de intake komen.
 import { FOTO, type Foto } from "@/components/fotos";
 import type { Vraag } from "@/components/Blokken";
@@ -30,24 +31,24 @@ export const zorgvormen: Zorgvorm[] = [
   {
     slug: "uurzorg",
     naam: "Zorg per uur",
-    kort: "Vanaf 1 uur zorg",
-    titel: "Zorg per uur, vanaf 1 uur",
+    kort: "Vanaf 3 uur zorg",
+    titel: "Zorg per uur, vanaf 3 uur",
     foto: FOTO.koffie,
     zijFoto: FOTO.deur,
-    badge: ["al vanaf", "1 uur"],
-    h1: "Zorg per uur, al vanaf 1 uur",
-    lead: "Soms is een uur hulp genoeg om de dag goed te beginnen of rustig af te sluiten. Bij ons kan zorg al vanaf 1 uur per keer, bij u thuis, doordeweeks en in het weekend.",
+    badge: ["vanaf", "3 uur"],
+    h1: "Zorg per uur, vanaf 3 uur per keer",
+    lead: "Een paar uur hulp op een vast moment, zodat de dag of de avond goed verloopt. Bij ons is zorg per uur mogelijk vanaf 3 uur per keer, bij u thuis, doordeweeks en in het weekend. Een korter bezoek, bijvoorbeeld 1 uur, is op aanvraag mogelijk.",
     watKop: "Wat is zorg per uur?",
     wat: [
       "Zorg per uur betekent dat wij op vaste momenten bij u langskomen voor de hulp die u nodig heeft, en daarna weer gaan. U heeft geen hele dag zorg nodig, maar wel een vertrouwd persoon op de momenten die ertoe doen.",
-      "Het kleinste blok is 1 uur. Dat is genoeg tijd om iets echt goed te doen: rustig douchen en aankleden, in plaats van tien minuten haast. U ziet steeds hetzelfde gezicht.",
+      "Een bezoek duurt minimaal 3 uur. Dat geeft rust: tijd om samen te douchen en aan te kleden, te eten, een stukje te wandelen of de medicatie rustig door te nemen, zonder haast. U ziet steeds hetzelfde gezicht. Is er maar een uur hulp nodig? Dat kan op aanvraag.",
     ],
-    momentenKop: "Wanneer een uur zorg het verschil maakt",
+    momentenKop: "Wanneer een paar uur zorg het verschil maakt",
     momenten: [
-      { kop: "De ochtend", tekst: "Opstaan, wassen, aankleden en samen ontbijten. Daarna kunt u de dag zelf aan." },
-      { kop: "De avond", tekst: "Hulp bij het naar bed gaan, de medicatie en even nagaan of alles in orde is voor de nacht." },
-      { kop: "Een vast moment in de week", tekst: "Bijvoorbeeld hulp bij het douchen, of een uur samen boodschappen doen of wandelen." },
-      { kop: "Even vrij voor de mantelzorger", tekst: "Een uur waarin u als partner of kind zelf iets kunt doen, terwijl wij er zijn." },
+      { kop: "De ochtend", tekst: "Opstaan, wassen, aankleden, samen ontbijten en de ochtend rustig op gang helpen. Daarna kunt u de dag zelf aan." },
+      { kop: "De avond", tekst: "De avondmaaltijd, hulp bij het naar bed gaan, de medicatie en nagaan of alles in orde is voor de nacht." },
+      { kop: "Een vast moment in de week", tekst: "Bijvoorbeeld een ochtend of middag samen boodschappen doen, wandelen of iets ondernemen." },
+      { kop: "Even vrij voor de mantelzorger", tekst: "Een middag waarin u als partner of kind zelf iets kunt doen, terwijl wij er zijn." },
     ],
     pastKop: "Zorg per uur past vaak als",
     past: [
@@ -57,15 +58,15 @@ export const zorgvormen: Zorgvorm[] = [
       "u als mantelzorger een vast moment wilt overdragen",
     ],
     eerlijk: {
-      kop: "Wat u van een uur zorg mag verwachten",
-      tekst: "In een uur kunnen wij veel, maar niet alles. Is er meer nodig dan in een uur past, dan zeggen wij dat eerlijk en kijken we samen naar een langer blok. Andersom geldt hetzelfde: wij adviseren nooit meer uren dan nodig is.",
+      kop: "Wat u van een paar uur zorg mag verwachten",
+      tekst: "In drie uur kunnen wij veel, maar niet alles. Is er meer nodig dan in die tijd past, dan zeggen wij dat eerlijk en kijken we samen naar een langer blok. Andersom geldt hetzelfde: wij adviseren nooit meer uren dan nodig is.",
     },
     kosten: "Zorg per uur rekenen wij per uur. Het tarief hangt af van de zorg en de tijden, en u hoort het vooraf. U betaalt particulier of vanuit een pgb.",
     faq: [
-      { vraag: "Wat is het minimum aantal uren?", antwoord: "Zorg is mogelijk vanaf 1 uur per keer. Hoe vaak wij komen, bepaalt u samen met ons: één keer per week of elke dag." },
+      { vraag: "Wat is het minimum aantal uren?", antwoord: "Een bezoek duurt minimaal 3 uur. Een korter bezoek, bijvoorbeeld 1 uur, is op aanvraag mogelijk. Hoe vaak wij komen, bepaalt u samen met ons: één keer per week of elke dag." },
       { vraag: "Kan zorg per uur ook in het weekend?", antwoord: "Ja. Ook op zaterdag en zondag komen wij langs voor zorg per uur." },
       { vraag: "Komt er steeds dezelfde zorgverlener?", antwoord: "Ja. Wij werken met een vast gezicht, zodat u niet steeds iemand nieuws over de vloer krijgt." },
-      { vraag: "Kan ik later meer uren krijgen?", antwoord: "Ja. Verandert uw situatie, dan passen wij de afspraken aan. Van een uur tot 24-uurszorg is mogelijk." },
+      { vraag: "Kan ik later meer uren krijgen?", antwoord: "Ja. Verandert uw situatie, dan passen wij de afspraken aan. Van 3 uur per keer tot 24-uurszorg is mogelijk." },
     ],
   },
   {
@@ -103,7 +104,7 @@ export const zorgvormen: Zorgvorm[] = [
     },
     kosten: "Blokzorg rekenen wij per blok of per uur. Het tarief hangt af van de lengte van het blok en de tijden, overdag of in de nacht. U hoort het vooraf. U betaalt particulier of vanuit een pgb.",
     faq: [
-      { vraag: "Welke blokken bieden jullie aan?", antwoord: "Blokken van 4 uur en van 12 uur. Daarnaast is zorg mogelijk vanaf 1 uur per keer en als 24-uurszorg." },
+      { vraag: "Welke blokken bieden jullie aan?", antwoord: "Blokken van 4 uur en van 12 uur. Daarnaast is zorg per uur mogelijk vanaf 3 uur per keer, en als 24-uurszorg." },
       { vraag: "Kan een blok ook in de nacht?", antwoord: "Ja. Een nachtblok kan als waakdienst, waarbij wij wakker blijven, of als slaapdienst, waarbij wij in huis slapen en opstaan als het nodig is." },
       { vraag: "Kan blokzorg ook in het weekend?", antwoord: "Ja. Blokzorg is ook op zaterdag en zondag mogelijk." },
       { vraag: "Is blokzorg hetzelfde als respijtzorg?", antwoord: "Blokzorg zegt iets over de lengte van de zorg, respijtzorg over het doel: de mantelzorger ontlasten. Vaak gaan ze samen, bijvoorbeeld een vast blok van 4 uur per week zodat u even vrij bent." },

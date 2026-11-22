@@ -19,7 +19,7 @@ const GROEPEN: { kop: string; vragen: Vraag[] }[] = [
       { vraag: "Kan ik de zorg betalen met een pgb?", antwoord: "Ja. U kunt de zorg particulier betalen of vanuit een persoonsgebonden budget." },
       { vraag: "Wat kost een uur zorg?", antwoord: "Het tarief hangt af van de zorg en de tijden. U hoort het vooraf, zodat u niet voor verrassingen komt te staan." },
       { vraag: "Heb ik een indicatie nodig?", antwoord: "Voor particuliere zorg niet. Voor een pgb wel: die indicatie komt van de gemeente, het CIZ of een wijkverpleegkundige, afhankelijk van de route." },
-      { vraag: "Wat is de minimale afname?", antwoord: "Zorg is mogelijk vanaf 1 uur per keer." },
+      { vraag: "Wat is de minimale afname?", antwoord: "Zorg is mogelijk vanaf 3 uur per keer. Een korter bezoek, bijvoorbeeld 1 uur, is op aanvraag mogelijk." },
     ],
   },
   {

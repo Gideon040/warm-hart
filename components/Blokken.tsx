@@ -117,7 +117,7 @@ export function Belofte() {
   const punten = [
     "Een vast gezicht",
     "Ook in het weekend",
-    "Vanaf 1 uur tot 24-uurszorg",
+    "Vanaf 3 uur tot 24-uurszorg",
     "Particulier en pgb",
     ...(site.vog ? ["VOG aanwezig"] : []),
   ];
@@ -176,7 +176,7 @@ export function ZorgKaarten({ uitzondering, plaats, metVraag = false }: { uitzon
   );
 }
 
-export function Omvang({ label = "Van een uur tot de hele dag:" }: { label?: string }) {
+export function Omvang({ label = "Van 3 uur tot de hele dag:" }: { label?: string }) {
   return (
     <div className="omvang">
       <b>{label}</b>
