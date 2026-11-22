@@ -1,9 +1,9 @@
 import type { Metadata, Viewport } from "next";
 import { Caveat, Montserrat, Nunito_Sans } from "next/font/google";
-import Script from "next/script";
 import Kop from "@/components/Kop";
 import Voet from "@/components/Voet";
 import Meten from "@/components/Meten";
+import Meetcode from "@/components/Meetcode";
 import { localBusiness } from "@/lib/schema";
 import { site } from "@/site.config";
 import "./globals.css";
@@ -83,8 +83,6 @@ const websiteSchema = {
   publisher: { "@id": `${site.url}/#organisatie` },
 };
 
-const ga4Actief = /^G-[A-Z0-9]{6,}$/.test(site.ga4Id) && site.ga4Id !== "G-XXXXXXX";
-
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="nl" className={`${montserrat.variable} ${nunito.variable} ${caveat.variable}`}>
@@ -96,15 +94,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <div id="inhoud">{children}</div>
         <Voet />
         <Meten />
-        {ga4Actief && (
-          <>
-            <Script src={`https://www.googletagmanager.com/gtag/js?id=${site.ga4Id}`} strategy="afterInteractive" />
-            <Script id="ga4" strategy="afterInteractive">
-              {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}
-gtag('js',new Date());gtag('config','${site.ga4Id}');`}
-            </Script>
-          </>
-        )}
+        <Meetcode />
       </body>
     </html>
   );

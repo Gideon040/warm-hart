@@ -2,6 +2,7 @@ import Link from "next/link";
 import { site } from "@/site.config";
 import { Logo } from "./Kop";
 import { telLink, ZorgvraagKnop } from "./Blokken";
+import { CookieKnop } from "./Meetcode";
 
 // Footer (structuurspec 4.1 blok 11): diensten | werkgebied | contact |
 // juridisch, KvK/AGB-regel en "Website door Zorgbaar".
@@ -59,6 +60,7 @@ export default function Voet() {
                 <li><Link href="/klachtenregeling">Klachtenregeling</Link></li>
                 <li><Link href="/privacy">Privacyverklaring</Link></li>
                 <li><Link href="/algemene-voorwaarden">Algemene voorwaarden</Link></li>
+                <li><CookieKnop /></li>
               </ul>
             </div>
           </div>

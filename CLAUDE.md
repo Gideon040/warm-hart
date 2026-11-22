@@ -2,7 +2,7 @@
 
 ## Wat dit is
 Gedeelde onderdelen die in ELKE klantsite identiek moeten werken:
-formulier, utm-capture, bedankpagina, GA4-events, schema.org.
+formulier, utm-capture, bedankpagina, GA4 + cookiebanner, schema.org.
 Branding is overal Zorgbaar ("Website door Zorgbaar" in de footer).
 
 ## De structuurspec
@@ -62,8 +62,11 @@ er nog geen artikelen zijn (zie structuurspec).
   breadcrumbSchema op alles onder de home. Artikel + breadcrumb op
   kennisbankartikelen zit al in het startpakket.
 - GA4: per site een datastream in property "Zorgbaar Netwerk";
-  Measurement ID in site.config.ts, gtag-snippet in de <head>
-  (voorbeeld onderin lib/analytics.ts).
+  Measurement ID in site.config.ts. GA4 laden ALLEEN via
+  <Meetcode /> (components/Meetcode.tsx) in de layout: Consent Mode v2,
+  standaard alles denied, cookiebanner met Accepteren/Weigeren. Geen
+  eigen gtag-snippet. In de footer <CookieKnop /> (ook uit
+  Meetcode.tsx); banner stylen via zb-cookies, knop via zb-cookie-knop.
 - GSC-koppeling bij oplevering van elke site.
 
 ## Checklist nieuwe klantsite
@@ -81,5 +84,3 @@ er nog geen artikelen zijn (zie structuurspec).
    in GA4 realtime.
 7. Deploy, domein koppelen, GSC verifiëren; domein + webmail-URL
    invullen bij de organisatie in het portaal.
-
-@AGENTS.md

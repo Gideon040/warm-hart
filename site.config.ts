@@ -122,8 +122,7 @@ export const site = {
   // Productie-URL zonder slash aan het einde. Gebruikt voor sitemap,
   // robots, canonicals en schema.org.
   url: "https://www.particulierethuiszorgalmere.nl",
-  // TODO: datastream in "Zorgbaar Netwerk" aanmaken en het ID hier invullen.
-  ga4Id: "G-XXXXXXX",
+  ga4Id: "G-4DFH5HZSEE",
   // TODO: Google Search Console, HTML-tag-methode: alleen de content-waarde.
   gscVerificatie: "" as string,
   // Extra paden van deze site (bijv. "/diensten/huishoudelijke-hulp-hengelo")
