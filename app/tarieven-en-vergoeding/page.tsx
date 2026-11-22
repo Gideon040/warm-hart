@@ -18,7 +18,7 @@ const ROUTES = [
     kop: "Particulier",
     wat: "U betaalt de zorg zelf. U heeft geen indicatie nodig en u bepaalt samen met ons hoeveel zorg u krijgt en wanneer.",
     wie: "Voor iedereen die snel zorg wil, zonder aanvraag of wachttijd, of die zorg wil naast wat al vergoed wordt.",
-    hoe: "Bel of stuur uw zorgvraag. Na de intake legt u de afspraken en het tarief vast in een zorgovereenkomst.",
+    hoe: "Bel of stuur uw zorgvraag. Na de kennismaking legt u de afspraken en het tarief vast in een zorgovereenkomst.",
   },
   {
     kop: "Persoonsgebonden budget (pgb)",

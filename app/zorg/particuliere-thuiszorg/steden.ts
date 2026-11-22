@@ -180,7 +180,7 @@ export const steden: Record<string, StadInhoud> = {
     ],
     wmo: "De Wmo regelt u in Nijkerk via een van de vier gebiedsteams van de gemeente; in Hoevelaken is een eigen loket.",
     ziekenhuis: "Meander MC (locatie Nijkerk en Amersfoort)",
-    voorbereiding: "Gaat uw naaste in Nijkerk al naar de polikliniek van Meander? Neem dan bij de intake het overzicht van afspraken en medicijnen mee. Dan stemmen we de zorg thuis daar meteen op af.",
+    voorbereiding: "Gaat uw naaste in Nijkerk al naar de polikliniek van Meander? Neem dan bij de kennismaking het overzicht van afspraken en medicijnen mee. Dan stemmen we de zorg thuis daar meteen op af.",
     faq: [
       { vraag: "Komen jullie ook in Hoevelaken en Nijkerkerveen?", antwoord: "Ja. Wij komen in alle drie de woonplaatsen van de gemeente Nijkerk: Nijkerk, Hoevelaken en Nijkerkerveen." },
       { vraag: "Bij welk Wmo-team hoor ik in Nijkerk?", antwoord: "Dat hangt af van uw postcode: de gemeente werkt met vier gebiedsteams. Voor particuliere zorg bij ons maakt dat niet uit; u belt ons gewoon direct." },
@@ -205,7 +205,7 @@ export const steden: Record<string, StadInhoud> = {
     faq: [
       { vraag: "Komen jullie ook in Eemdijk?", antwoord: "Ja. Wij komen in de hele gemeente Bunschoten: Bunschoten, Spakenburg, Eemdijk en de buurtschappen." },
       { vraag: "Kunnen jullie de mantelzorg in Spakenburg ontlasten?", antwoord: "Ja. Met respijtzorg nemen wij de zorg een paar uur, een dagdeel of een nacht over, zodat u als mantelzorger even vrij bent." },
-      { vraag: "Houden jullie rekening met geloof en gewoontes?", antwoord: "Ja. Bij de intake vragen wij wat voor u belangrijk is in de dag en in de week, zoals rustmomenten, maaltijden en de zondag. Daar passen we de zorg op aan." },
+      { vraag: "Houden jullie rekening met geloof en gewoontes?", antwoord: "Ja. In de kennismaking vragen wij wat voor u belangrijk is in de dag en in de week, zoals rustmomenten, maaltijden en de zondag. Daar passen we de zorg op aan." },
     ],
     bronnen: ["Gemeente Bunschoten, Zorgloket", "Meander Medisch Centrum", "Stichting De Boei"],
   },

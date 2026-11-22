@@ -83,7 +83,7 @@ export default function ZorgvraagWizard() {
       gekozen.length > 1 ? `Gekozen zorg: ${gekozen.map((d) => d.naam).join(", ")}.` : "",
       w && !w.urgentie ? `Start: ${w.label.toLowerCase()} (${w.sub.toLowerCase()}).` : "",
       plaats === ANDERS ? "Plaats valt buiten het vaste werkgebied." : "",
-      buitenAlmere ? `Plaats buiten ${site.plaats}: zorg vanaf ${site.buitenAlmere.minimum}, intake eerst ${site.buitenAlmere.kennismaking}.` : "",
+      buitenAlmere ? `Plaats buiten ${site.plaats}: zorg vanaf ${site.buitenAlmere.minimum}, kennismaking eerst ${site.buitenAlmere.kennismaking}.` : "",
       toelichting.trim(),
     ].filter(Boolean);
     try {

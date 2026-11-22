@@ -123,7 +123,7 @@ export const zorgvormen: Zorgvorm[] = [
     watKop: "Wat is 24-uurszorg?",
     wat: [
       "Bij 24-uurszorg is er de klok rond zorg in huis. Overdag helpen wij bij de verzorging, het eten, de medicatie en de dag zelf. 's Nachts is er iemand aanwezig, zodat er hulp is als die nodig is.",
-      "Veel mensen kiezen voor 24-uurszorg in de laatste levensfase, of wanneer iemand niet meer veilig alleen kan zijn maar wel thuis wil blijven. Hoe de zorg precies wordt ingevuld, met welke diensten en tijden, bespreken wij eerlijk tijdens de intake.",
+      "Veel mensen kiezen voor 24-uurszorg in de laatste levensfase, of wanneer iemand niet meer veilig alleen kan zijn maar wel thuis wil blijven. Hoe de zorg precies wordt ingevuld, met welke diensten en tijden, bespreken wij eerlijk tijdens de kennismaking.",
     ],
     momentenKop: "Een dag en nacht met 24-uurszorg",
     momenten: [
@@ -145,7 +145,7 @@ export const zorgvormen: Zorgvorm[] = [
     },
     kosten: "24-uurszorg is maatwerk. Het tarief hangt af van de invulling van de dag en de nacht en van de periode. U hoort het vooraf, op papier. U betaalt particulier of vanuit een pgb.",
     faq: [
-      { vraag: "Hoe snel kan 24-uurszorg starten?", antwoord: "Er is op dit moment plek. Bel ons gerust, ook in het weekend voor spoed. Na de intake spreken we samen een startdatum af." },
+      { vraag: "Hoe snel kan 24-uurszorg starten?", antwoord: "Er is op dit moment plek. Bel ons gerust, ook in het weekend voor spoed. Na de kennismaking spreken we samen een startdatum af." },
       { vraag: "Kan 24-uurszorg ook tijdelijk?", antwoord: "Ja. Bijvoorbeeld na een ziekenhuisopname, in de laatste levensfase of als de mantelzorger een periode weg is." },
       { vraag: "Werken jullie samen met de huisarts?", antwoord: "Ja. Wij stemmen graag af met de huisarts en met andere zorgverleners die al bij u betrokken zijn." },
       { vraag: "Kan ik 24-uurszorg betalen met een pgb?", antwoord: "Ja. U kunt de zorg particulier betalen of vanuit een persoonsgebonden budget. Wij leggen u graag uit hoe dat werkt." },

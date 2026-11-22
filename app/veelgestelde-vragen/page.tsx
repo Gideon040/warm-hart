@@ -37,7 +37,7 @@ const GROEPEN: { kop: string; vragen: Vraag[] }[] = [
   {
     kop: "Praktisch",
     vragen: [
-      { vraag: "Hoe snel kan de zorg starten?", antwoord: "Er is op dit moment plek. Na de intake spreken we samen een startdatum af." },
+      { vraag: "Hoe snel kan de zorg starten?", antwoord: "Er is op dit moment plek. Na de kennismaking spreken we samen een startdatum af." },
       { vraag: "Kan ik ook in het weekend zorg krijgen?", antwoord: "Ja, alle zorg is ook op zaterdag en zondag mogelijk." },
       { vraag: "Wanneer bent u bereikbaar?", antwoord: "Op maandag tot en met vrijdag van 10:00 tot 17:00 uur. In het weekend alleen voor spoedaanvragen." },
       { vraag: `In welke delen van ${site.plaats} biedt u zorg?`, antwoord: `In heel ${site.plaats}: Stad, Buiten, Haven, Poort en Hout.` },

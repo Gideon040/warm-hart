@@ -112,7 +112,7 @@ export default function ParticuliereThuiszorg() {
           { vraag: "Heb ik een indicatie nodig?", antwoord: "Voor particuliere zorg niet. Wilt u betalen met een pgb, dan is er wel een indicatie of beschikking nodig, van de gemeente, het CIZ of een wijkverpleegkundige." },
           { vraag: "Wat is het verschil met de wijkverpleging?", antwoord: "De wijkverpleging wordt vergoed uit de zorgverzekering en werkt met korte bezoeken en wisselende teams. Bij particuliere zorg spreekt u zelf af hoeveel tijd er is en wie er komt. Het kan ook naast elkaar." },
           { vraag: "Hoeveel zorg kan ik krijgen?", antwoord: "Van 3 uur per keer tot 24-uurszorg, met blokken van 4 of 12 uur daartussen. Ook in het weekend. Een korter bezoek is op aanvraag mogelijk." },
-          { vraag: "Hoe snel kan de zorg starten?", antwoord: "Er is op dit moment plek. Na de intake (in Almere bij u thuis) spreken we samen een startdatum af." },
+          { vraag: "Hoe snel kan de zorg starten?", antwoord: "Er is op dit moment plek. Na de kennismaking (in Almere bij u thuis) spreken we samen een startdatum af." },
         ]}
       />
 

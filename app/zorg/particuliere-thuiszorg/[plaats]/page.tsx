@@ -68,8 +68,8 @@ export default async function StadPagina({ params }: Props) {
     {
       vraag: `Wat kost particuliere thuiszorg in ${stad.naam}?`,
       antwoord: [
-        `Het tarief hangt af van de zorg, de tijden en de omvang. U hoort het vooraf, na de intake. U betaalt particulier of vanuit een pgb.`,
-        `Dat verschilt per situatie: welke zorg, hoe vaak en op welke tijden. Na de intake in ${stad.naam} krijgt u het tarief op papier. Betalen kan particulier of met een pgb.`,
+        `Het tarief hangt af van de zorg, de tijden en de omvang. U hoort het vooraf, na de kennismaking. U betaalt particulier of vanuit een pgb.`,
+        `Dat verschilt per situatie: welke zorg, hoe vaak en op welke tijden. Na de kennismaking in ${stad.naam} krijgt u het tarief op papier. Betalen kan particulier of met een pgb.`,
         `Er is geen vast bedrag, omdat geen zorgvraag hetzelfde is. Na de intake hoort u wat de zorg kost. U betaalt zelf of vanuit een pgb.`,
       ][i % 3],
     },
