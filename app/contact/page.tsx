@@ -33,11 +33,13 @@ export default function Contact() {
               <a href={telLink()}>{site.telefoonWeergave}</a>
               <span>ma t/m vr 10:00 tot 17:00</span>
             </div>
-            <div className="contactkaart">
-              <h2><Hart />Mailen</h2>
-              <a href={`mailto:${site.email}`}>{site.email}</a>
-              <span>Wij reageren zo snel mogelijk</span>
-            </div>
+            {site.email && (
+              <div className="contactkaart">
+                <h2><Hart />Mailen</h2>
+                <a href={`mailto:${site.email}`}>{site.email}</a>
+                <span>Wij reageren zo snel mogelijk</span>
+              </div>
+            )}
             <div className="contactkaart">
               <h2><Hart />Spoed in het weekend</h2>
               <strong>Bel gerust</strong>

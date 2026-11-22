@@ -17,7 +17,7 @@ export function GET() {
     "",
     "## Gegevens",
     `- Telefoon: ${site.telefoonWeergave} (${site.bereikbaarheid})`,
-    `- E-mail: ${site.email}`,
+    ...(site.email ? [`- E-mail: ${site.email}`] : []),
     `- Werkgebied: ${plaats.naam} (${plaats.kernen.join(", ")}) en ${site.steden.map((st) => st.naam).join(", ")}`,
     `- KvK: ${site.kvk}, AGB-code: ${site.agb}${site.vog ? ", VOG aanwezig" : ""}`,
     `- Talen: ${g.talen.join(", ")}`,

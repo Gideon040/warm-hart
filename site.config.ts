@@ -118,7 +118,10 @@ export const site = {
   plaats: "Almere",
   segment: "thuiszorg",
   telefoon: "+31683217757",
-  email: "ondernemendaandeslag@hotmail.nl",
+  // Bewust leeg: Anushka wil geen e-mailadres op de site (besluit 22-11-2026).
+  // Haar zakelijke adres is info@particulierethuiszorgalmere.nl; meldingen van
+  // aanvragen gaan via het portaal (organisaties.email) daarheen.
+  email: "" as string,
   // Productie-URL zonder slash aan het einde. Gebruikt voor sitemap,
   // robots, canonicals en schema.org.
   url: "https://www.particulierethuiszorgalmere.nl",

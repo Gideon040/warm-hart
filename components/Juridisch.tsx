@@ -37,7 +37,7 @@ export function JuriPagina({ naam, pad, titel, lead, zijKop = "Vragen hierover?"
               <h2>{zijKop}</h2>
               {zijTekst}
               <a href={telLink()}>{site.telefoonWeergave}</a>
-              <a href={`mailto:${site.email}`}>{site.email}</a>
+              {site.email && <a href={`mailto:${site.email}`}>{site.email}</a>}
             </div>
             <div className="zacht">
               <b style={{ fontFamily: "var(--kop)" }}>Ook juridisch</b>

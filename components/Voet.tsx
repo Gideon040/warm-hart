@@ -43,7 +43,7 @@ export default function Voet() {
               <h2>Contact</h2>
               <ul>
                 <li><a href={telLink()}>{site.telefoonWeergave}</a></li>
-                <li><a href={`mailto:${site.email}`} style={{ overflowWrap: "anywhere" }}>{site.email}</a></li>
+                {site.email && <li><a href={`mailto:${site.email}`} style={{ overflowWrap: "anywhere" }}>{site.email}</a></li>}
                 <li>{site.plaats}</li>
                 <li>ma t/m vr 10:00 tot 17:00</li>
                 <li>Weekend: alleen spoedaanvragen</li>
