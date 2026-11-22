@@ -1,6 +1,6 @@
 "use client";
 import Script from "next/script";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useSyncExternalStore } from "react";
 import { site } from "../site.config";
 
 // GA4 met Google Consent Mode v2 + cookiebanner. Opnemen in de layout,
@@ -30,29 +30,43 @@ export function CookieKnop({ className = "zb-cookie-knop" }: { className?: strin
   );
 }
 
+const KEUZE_EVENT = "zb-cookies-keuze";
+
 function leesKeuze(): string | null {
   try { return localStorage.getItem(SLEUTEL); } catch { return null; }
+}
+
+// Keuze als externe store: op de server (en tijdens hydratie) "ssr", zodat
+// de banner pas in de browser verschijnt en er geen hydratieverschil is.
+function volgKeuze(melding: () => void) {
+  window.addEventListener(KEUZE_EVENT, melding);
+  window.addEventListener("storage", melding);
+  return () => {
+    window.removeEventListener(KEUZE_EVENT, melding);
+    window.removeEventListener("storage", melding);
+  };
 }
 
 export default function Meetcode() {
   const id: string = site.ga4Id; // string: in site.config is het een letterlijk type
   const actief = /^G-[A-Z0-9]{6,}$/.test(id) && id !== "G-XXXXXXX";
-  const [toon, setToon] = useState(false);
+  const keuze = useSyncExternalStore(volgKeuze, leesKeuze, () => "ssr");
+  const [heropend, setHeropend] = useState(false);
 
   useEffect(() => {
-    if (!actief) return;
-    if (!leesKeuze()) setToon(true);
-    const open = () => setToon(true);
+    const open = () => setHeropend(true);
     window.addEventListener(OPEN_EVENT, open);
     return () => window.removeEventListener(OPEN_EVENT, open);
-  }, [actief]);
+  }, []);
 
   if (!actief) return null;
+  const toon = keuze === null || heropend;
 
   function kies(ja: boolean) {
     try { localStorage.setItem(SLEUTEL, ja ? "ja" : "nee"); } catch {}
     window.gtag?.("consent", "update", { analytics_storage: ja ? "granted" : "denied" });
-    setToon(false);
+    setHeropend(false);
+    window.dispatchEvent(new Event(KEUZE_EVENT));
   }
 
   return (
