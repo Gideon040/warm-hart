@@ -48,7 +48,11 @@ benoemen in toelichting.
 
 GET /api/kennisbank?organisatie=<slug> → gepubliceerde artikelen
 (titel, slug, samenvatting, gepubliceerd_op); met &artikel=<slug>
-één artikel inclusief inhoud (markdown-achtig: ## koppen, alinea's).
+één artikel inclusief inhoud als opgeschoonde HTML uit de blog-editor
+van het portaal (h2-h4, p, strong/em/u/s, ul/ol/li, blockquote, a, hr;
+geen h1, die is de artikeltitel). app/kennisbank/[slug] toont die via
+dangerouslySetInnerHTML in .zb-artikel-inhoud; stijl h2-h4, lijsten,
+citaat en links in de eigen CSS van de site.
 De /kennisbank-pagina's van de site lezen hieruit; blok verbergen als
 er nog geen artikelen zijn (zie structuurspec).
 

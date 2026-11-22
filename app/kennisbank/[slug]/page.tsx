@@ -17,12 +17,15 @@ export async function generateMetadata({ params }: Props) {
   };
 }
 
-// Inhoud is eenvoudige tekst: "## " wordt een tussenkop,
-// een lege regel begint een nieuwe alinea.
-function Blokken({ inhoud }: { inhoud: string }) {
+// Inhoud is HTML uit de editor van het portaal; de API levert die al
+// opgeschoond aan (alleen h2-h4, p, strong/em/u/s, lijsten, blockquote, links).
+// Vangnet voor oude platte tekst: "## " = tussenkop, lege regel = alinea.
+function Inhoud({ inhoud }: { inhoud: string }) {
+  if (/^\s*</.test(inhoud))
+    return <div className="zb-artikel-inhoud" dangerouslySetInnerHTML={{ __html: inhoud }} />;
   const blokken = inhoud.replace(/\r\n/g, "\n").split(/\n{2,}/);
   return (
-    <>
+    <div className="zb-artikel-inhoud">
       {blokken.map((blok, i) =>
         blok.startsWith("## ") ? (
           <h2 key={i}>{blok.slice(3).trim()}</h2>
@@ -30,7 +33,7 @@ function Blokken({ inhoud }: { inhoud: string }) {
           <p key={i}>{blok.trim()}</p>
         )
       )}
-    </>
+    </div>
   );
 }
 
@@ -60,7 +63,7 @@ export default async function Artikel({ params }: Props) {
         <time dateTime={artikel.gepubliceerd_op}>
           {artikelDatum(artikel.gepubliceerd_op)}
         </time>
-        <Blokken inhoud={artikel.inhoud} />
+        <Inhoud inhoud={artikel.inhoud} />
       </article>
       <aside className="zb-artikel-cta">
         <p>Vragen over uw situatie? {site.naam} helpt u graag verder.</p>

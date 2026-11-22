@@ -364,6 +364,22 @@ a.pill:hover { background: var(--blauw); color: var(--wit); }
 .zb-artikel article { display: flex; flex-direction: column; gap: 18px; }
 .zb-artikel article h2 { font-size: 24px; margin-top: 18px; }
 .zb-artikel article p { color: var(--tekst); font-size: 17px; line-height: 1.8; }
+/* Artikeltekst uit de portaal-editor (h2-h4, lijsten, citaat, links) */
+.zb-artikel-inhoud > * + * { margin-top: 16px; }
+.zb-artikel-inhoud h2 { margin-top: 36px; }
+.zb-artikel-inhoud h3 { font-size: 20px; margin-top: 28px; }
+.zb-artikel-inhoud h4 { font-family: var(--kop); color: var(--inkt); font-weight: 700; font-size: 17.5px; margin: 22px 0 0; }
+.zb-artikel-inhoud h2 + *, .zb-artikel-inhoud h3 + *, .zb-artikel-inhoud h4 + * { margin-top: 10px; }
+.zb-artikel-inhoud ul, .zb-artikel-inhoud ol { padding-left: 24px; color: var(--tekst); font-size: 17px; line-height: 1.8; }
+.zb-artikel-inhoud ul { list-style: disc; }
+.zb-artikel-inhoud ol { list-style: decimal; }
+.zb-artikel-inhoud li + li { margin-top: 6px; }
+.zb-artikel-inhoud li p { margin: 0; }
+.zb-artikel-inhoud blockquote { margin: 28px 0; padding: 4px 0 4px 20px; border-left: 4px solid var(--hart); }
+.zb-artikel-inhoud blockquote p { font-style: italic; color: var(--inkt); }
+.zb-artikel-inhoud a { color: var(--blauw); text-decoration: underline; text-underline-offset: 3px; }
+.zb-artikel-inhoud strong, .zb-artikel-inhoud b { color: var(--inkt); }
+.zb-artikel-inhoud hr { border: 0; border-top: 1px solid var(--lijn); margin: 32px 0; }
 .zb-artikel-cta { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 18px; margin-top: 16px; padding: 32px; border-radius: 36px 8px 36px 8px; background: var(--blauw); color: var(--wit); }
 .zb-artikel-cta p { flex: 1 1 100%; color: var(--wit); font-family: var(--kop); font-weight: 700; font-size: 18px; }
 .zb-artikel-cta a { display: inline-flex; align-items: center; min-height: 48px; padding: 12px 24px; border-radius: var(--r-knop); background: var(--wit); color: var(--blauw); font-family: var(--kop); font-weight: 700; text-decoration: none; }
