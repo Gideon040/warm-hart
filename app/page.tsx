@@ -9,7 +9,7 @@ import { FOTO } from "@/components/fotos";
 import { paginaMeta } from "@/components/meta";
 
 export const metadata = paginaMeta({
-  titel: `Particuliere thuiszorg in ${site.plaats} | ${site.merkKort}`,
+  titel: `${site.merkKort} | Zorg thuis met een vast gezicht`,
   beschrijving: `Particuliere zorg thuis in ${site.plaats}: persoonlijke verzorging, nachtzorg, palliatieve zorg, respijtzorg en dagbesteding. Een vast gezicht, ook in het weekend.`,
   pad: "",
   foto: FOTO.mevrouw,
@@ -26,7 +26,7 @@ export default async function Home() {
       {/* [2] Hero */}
       <Hero
         eb={`Particuliere thuiszorgorganisatie in ${site.plaats}`}
-        titel={`Particuliere zorg thuis in ${site.plaats}, met een warm hart`}
+        titel={`Particuliere zorg thuis in ${site.plaats}, persoonlijk en dichtbij`}
         lead="Wij bieden persoonlijke verzorging, nachtzorg, palliatieve zorg en respijtzorg bij u thuis, doordeweeks en in het weekend. U krijgt een vast gezicht dat de tijd voor u neemt."
         foto={FOTO.mevrouw}
         badge={["zorg met", "aandacht"]}

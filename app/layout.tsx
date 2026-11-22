@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   // Geen title.template: de pagina's uit het startpakket zetten de merknaam
   // zelf al in de titel.
-  title: `Particuliere thuiszorg in ${site.plaats} | ${site.naam}`,
+  title: `${site.naam} | Zorg thuis met een vast gezicht`,
   description: `Particuliere zorg thuis in ${site.plaats}, met een vast gezicht. Persoonlijke verzorging, nachtzorg, palliatieve zorg, respijtzorg en dagbesteding.`,
   applicationName: site.naam,
   formatDetection: { telephone: false },

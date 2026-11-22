@@ -10,8 +10,8 @@ export function Logo() {
     <span className="logo">
       <Hart maat={28} />
       <span className="logo-tekst">
-        <b>Professioneel in Zorg</b>
-        <span>met een warm Hart</span>
+        <b>Particuliere Thuiszorg</b>
+        <span>Almere</span>
       </span>
     </span>
   );

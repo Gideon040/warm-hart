@@ -6,7 +6,7 @@ import { breadcrumbSchema, faqSchema } from "@/lib/schema";
 import type { Foto } from "./fotos";
 import { FOTO } from "./fotos";
 
-// Bouwstenen van het ontwerp "warm Hart". Elke pagina is opgebouwd uit deze
+// Bouwstenen van het ontwerp. Elke pagina is opgebouwd uit deze
 // blokken, in de volgorde van de structuurspec.
 
 const HART_PAD =

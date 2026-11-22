@@ -41,7 +41,7 @@ export async function generateMetadata({ params }: Props) {
   });
 }
 
-// Stadspagina (schrijfwijzer §3), in de vorm van het warm Hart-ontwerp.
+// Stadspagina (schrijfwijzer §3), in de vorm van het ontwerp van deze site.
 export default async function StadPagina({ params }: Props) {
   const gevonden = zoek((await params).plaats);
   if (!gevonden) notFound();

@@ -1,4 +1,4 @@
-# Professioneel In Zorg met een warm Hart
+# Particuliere Thuiszorg Almere
 
 Klantsite van Zorgbaar, gebouwd volgens `zorgbaarportaal-structuur-wireframes.md`
 met het ontwerp uit `D:\zorgbaar-portaal\warmhart-website` als schil.

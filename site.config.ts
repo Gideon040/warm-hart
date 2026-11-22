@@ -111,10 +111,10 @@ const vastePaginas = [
 
 export const site = {
   slug: "particulierethuiszorgalmere",
-  naam: "Professioneel In Zorg met een warm Hart",
-  // Korte merknaam voor paginatitels (bovenste regel van het logo), zodat
-  // titels onder ~65 tekens blijven en het zoekwoord vooraan staat.
-  merkKort: "Professioneel in Zorg",
+  naam: "Particuliere Thuiszorg Almere",
+  // Merknaam achter paginatitels; valt weg als de titel dan te lang wordt
+  // (zie components/meta.ts).
+  merkKort: "Particuliere Thuiszorg Almere",
   plaats: "Almere",
   segment: "thuiszorg",
   telefoon: "+31683217757",

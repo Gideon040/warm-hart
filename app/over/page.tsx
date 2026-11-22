@@ -41,7 +41,7 @@ export default function Over() {
         lead={`Wij houden van mensen. Als particuliere thuiszorgorganisatie bieden wij zorg thuis in ${site.plaats}, met aandacht voor wie u bent.`}
         plek="Een vast gezicht, geen wisselende zorgverleners"
         foto={FOTO.deur}
-        badge={["met een", "warm hart"]}
+        badge={["een vast", "gezicht"]}
       />
 
       {/* [1] Verhaal + [2] gezicht */}

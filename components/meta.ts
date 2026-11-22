@@ -15,13 +15,22 @@ export function kortAf(tekst: string, max = 160) {
   return `${stuk.slice(0, stuk.lastIndexOf(" ")).replace(/[,:;]$/, "")}…`;
 }
 
-export function paginaMeta({ titel, beschrijving, pad, foto, noindex = false }: {
+// De merknaam is lang (en bevat zelf het zoekwoord): past de titel met
+// " | merknaam" niet binnen ~65 tekens, dan valt het merkdeel weg.
+function pasTitel(titel: string, max = 65) {
+  const staart = ` | ${site.merkKort}`;
+  if (titel.length <= max || !titel.endsWith(staart)) return titel;
+  return titel.slice(0, -staart.length);
+}
+
+export function paginaMeta({ titel: ruweTitel, beschrijving, pad, foto, noindex = false }: {
   titel: string;
   beschrijving: string;
   pad: string; // "" = homepage
   foto?: Foto;
   noindex?: boolean;
 }): Metadata {
+  const titel = pasTitel(ruweTitel);
   const url = `${site.url}${pad}`;
   const description = kortAf(beschrijving);
   // Staande foto's zijn ongeschikt als deelafbeelding: dan geldt
