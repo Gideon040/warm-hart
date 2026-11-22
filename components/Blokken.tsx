@@ -341,6 +341,7 @@ export function GoedOmTeWeten() {
     `AGB ${site.agb}`,
     `KvK ${site.kvk}`,
     ...(site.wtza ? [`Wtza: ${site.wtza}`] : []),
+    ...(site.klachtenAansluiting ? ["Wkkgz-klachtenregeling via SoloPartners"] : []),
   ];
   return <Labels items={items} />;
 }

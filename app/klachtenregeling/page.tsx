@@ -25,6 +25,8 @@ export default function Klachtenregeling() {
       </JuriBlok>
       <JuriBlok kop="2. De klachtenfunctionaris">
         Komt u er met ons niet uit, dan kunt u kosteloos naar een onafhankelijke klachtenfunctionaris{site.klachtenfunctionaris ? ` (${site.klachtenfunctionaris})` : ""}. Die bemiddelt en kiest geen partij.
+        {site.klachtenContact && <> U bereikt de klachtenfunctionaris {site.klachtenContact}.</>}
+        {site.klachtenAansluiting && <> Vermeld daarbij dat het om {site.naam} gaat (aangesloten bij {site.klachtenAansluiting}).</>}
       </JuriBlok>
       <JuriBlok kop="3. De geschilleninstantie">
         Leidt bemiddeling niet tot een oplossing, dan legt u de klacht voor aan de geschilleninstantie waarbij wij zijn aangesloten{site.geschilleninstantie ? `: ${site.geschilleninstantie}` : ""}, zoals de Wet kwaliteit, klachten en geschillen zorg (Wkkgz) voorschrijft. De uitspraak is bindend.

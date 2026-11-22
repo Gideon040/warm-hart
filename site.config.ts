@@ -152,8 +152,11 @@ export const site = {
   vog: true,
   // Leeg = niet tonen. Invullen zodra de klant het aanlevert.
   wtza: "", // TODO: Wtza-status (melding/vergunning)
-  geschilleninstantie: "", // TODO: naam geschilleninstantie (Wkkgz)
-  klachtenfunctionaris: "", // TODO: naam/organisatie klachtenfunctionaris
+  // Wkkgz via SoloPartners (klachtenregeling SoloPartners, versie januari 2024).
+  geschilleninstantie: "Geschillen In De Zorg (GIDZ) in Gorinchem, erkend door de minister van VWS",
+  klachtenfunctionaris: "de Klachtenfunctionaris SoloPartners, via CBKZ",
+  klachtenContact: "per e-mail via klachten@cbkz.nl of per post aan CBKZ, t.a.v. de Klachtenfunctionaris SoloPartners, Antwoordnummer 570, 4200 WB Gorinchem",
+  klachtenAansluiting: "SoloPartners, lidnummer 114062",
   aansprakelijkheid: "", // TODO: verzekering beroeps- en bedrijfsaansprakelijkheid
   // Alleen wat van toepassing is: het ontwerp noemt particulier en pgb.
   financiering: ["Particulier", "Pgb"],

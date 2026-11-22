@@ -61,7 +61,7 @@ Let op: Het Reinhart Huis (ook Zorgbaar) bedient deels dezelfde steden.
 ## Open punten (klant/Gideon)
 1. ~~Organisatie aanmaken in het portaal~~ gedaan: slug `particulierethuiszorgalmere` (status onboarding).
 2. Domein `particulierethuiszorgalmere.nl` registreren en koppelen, GA4 Measurement ID en GSC-verificatiecode.
-3. Wkkgz: geschilleninstantie en klachtenfunctionaris (klachtenregeling noemt ze nu zonder naam).
+3. ~~Wkkgz~~ gedaan: SoloPartners (lidnr. 114062), klachtenfunctionaris via CBKZ, geschilleninstantie GIDZ.
 4. Wtza-status, beroepsaansprakelijkheid.
 5. Bevestigen: worden zowel waakdienst als slaapdienst aangeboden?
 6. Bevestigen: dagbesteding is één op één bij de cliënt thuis (niet in een groep)?
