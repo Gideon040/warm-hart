@@ -35,7 +35,7 @@ const VAST: Vraag = {
 };
 const START: Vraag = {
   vraag: "Hoe snel kan de zorg starten?",
-  antwoord: "Er is op dit moment plek. Na de kennismaking spreken we samen een startdatum af.",
+  antwoord: "Er is op dit moment plek. Na de intake spreken we samen een startdatum af.",
 };
 
 export const inhoud: Record<string, DienstInhoud> = {
@@ -87,7 +87,7 @@ export const inhoud: Record<string, DienstInhoud> = {
     watKop: "Wat is nachtzorg?",
     watTekst: [
       "'s Nachts is het stil in huis, maar juist dan kan er veel spelen: onrust, pijn, verwardheid of de angst om te vallen. Met nachtzorg is er iemand in huis die het overzicht houdt en helpt waar dat nodig is.",
-      "Er zijn twee vormen: een waakdienst en een slaapdienst. Welke het beste past, bespreken we samen tijdens de kennismaking.",
+      "Er zijn twee vormen: een waakdienst en een slaapdienst. Welke het beste past, bespreken we samen tijdens de intake.",
     ],
     helpenKop: "Wij kunnen u in de nacht onder andere helpen bij:",
     helpen: [

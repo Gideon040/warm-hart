@@ -18,7 +18,7 @@ export default function Voorwaarden() {
       lead="Kort en leesbaar. Wat hier staat, geldt tenzij wij samen schriftelijk iets anders afspreken."
     >
       <JuriBlok kop="Start van de zorg">
-        De zorg begint na een kennismaking en een ondertekende zorgovereenkomst, met daarin de zorgvorm, de tijden en het tarief.
+        De zorg begint na een intake en een ondertekende zorgovereenkomst, met daarin de zorgvorm, de tijden en het tarief. {site.intakeKosten}
       </JuriBlok>
       <JuriBlok kop="Tarieven en factuur">
         Tarieven spreken wij vooraf schriftelijk af. Wij factureren per maand, op basis van de geleverde uren of nachten. Zorg is vrijgesteld van btw.

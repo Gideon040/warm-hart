@@ -168,6 +168,10 @@ export const site = {
   // Buiten Almere (de steden van "steden"): zorg pas vanaf een minimale
   // omvang, kennismaking eerst op afstand (reistijd). In Almere: alles vanaf
   // 3 uur per keer en kennismaking aan huis. Eén plek om dit te wijzigen.
+  // De intake (in Almere aan huis, daarbuiten op afstand) is niet gratis.
+  // Geen bedrag op de site: dat hoort de klant vooraf of vraagt hij op.
+  intakeKosten:
+    "Voor de intake vragen wij een vergoeding. Wat die is en welke voorwaarden gelden, hoort u vooraf. Vraag het ons gerust.",
   buitenAlmere: {
     minimum: "4 uur per keer",
     kennismaking: "telefonisch of via een videogesprek",

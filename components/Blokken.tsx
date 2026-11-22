@@ -248,8 +248,7 @@ export function BuitenAlmere({ plaats }: { plaats: string }) {
           <h2 className="h3">Zo werkt het in {plaats}</h2>
           <p className="tekst">
             Wij komen in {plaats} vanaf <b>{b.minimum}</b>. Voor kortere bezoeken is de reistijd vanuit {site.plaats} te
-            lang om u een vast gezicht te kunnen bieden. De kennismaking doen wij eerst {b.kennismaking}. Start de zorg,
-            dan komen wij bij u thuis.
+            lang om u een vast gezicht te kunnen bieden. De intake doen wij eerst {b.kennismaking}. Start de zorg, dan komen wij bij u thuis.
           </p>
           <p className="sm">Twijfelt u of uw zorgvraag past? Bel of stuur uw vraag gewoon in, dan kijken we samen wat er kan.</p>
         </div>
@@ -260,7 +259,7 @@ export function BuitenAlmere({ plaats }: { plaats: string }) {
 
 export const STAPPEN = [
   { kop: "U belt of mailt", tekst: "Vertel kort wat er speelt. Wij denken direct met u mee." },
-  { kop: "Kennismaken bij u thuis", tekst: "We bespreken uw wensen en gewoontes, in alle rust." },
+  { kop: "Intake bij u thuis", tekst: "We bespreken uw wensen en gewoontes, in alle rust. De kosten van de intake hoort u vooraf." },
   { kop: "Afspraken op maat", tekst: "Welke dagen, welke tijden en welke zorg. U weet vooraf waar u aan toe bent." },
   { kop: "Start van de zorg", tekst: "Wij komen bij u langs, met een vast gezicht." },
 ];

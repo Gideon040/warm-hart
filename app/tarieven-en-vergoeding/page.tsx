@@ -18,7 +18,7 @@ const ROUTES = [
     kop: "Particulier",
     wat: "U betaalt de zorg zelf. U heeft geen indicatie nodig en u bepaalt samen met ons hoeveel zorg u krijgt en wanneer.",
     wie: "Voor iedereen die snel zorg wil, zonder aanvraag of wachttijd, of die zorg wil naast wat al vergoed wordt.",
-    hoe: "Bel of stuur uw zorgvraag. Na de kennismaking legt u de afspraken en het tarief vast in een zorgovereenkomst.",
+    hoe: "Bel of stuur uw zorgvraag. Na de intake legt u de afspraken en het tarief vast in een zorgovereenkomst.",
   },
   {
     kop: "Persoonsgebonden budget (pgb)",
@@ -63,8 +63,8 @@ export default function Tarieven() {
           <div className="citaat-kaart" style={{ flexBasis: 360 }}>
             <h3 className="h3">Zo gaan wij te werk</h3>
             <HartLijst items={[
-              "Een vrijblijvend eerste gesprek",
-              `Kennismaken bij u thuis in ${site.plaats}`,
+              "Een vrijblijvend eerste telefoongesprek",
+              `Intake bij u thuis in ${site.plaats} (kosten hoort u vooraf)`,
               "Een vast gezicht",
               "Duidelijke afspraken over dagen, tijden en tarief",
             ]} />
@@ -110,9 +110,10 @@ export default function Tarieven() {
         vragen={[
           { vraag: "Wat kost een uur zorg?", antwoord: "Het tarief hangt af van de zorg en de tijden, overdag, in de nacht of in het weekend. U hoort het vooraf, zodat u niet voor verrassingen komt te staan." },
           { vraag: "Wat is de minimale afname?", antwoord: "Zorg is mogelijk vanaf 3 uur per keer. Een korter bezoek, bijvoorbeeld 1 uur, is op aanvraag mogelijk. Daarnaast bieden wij blokzorg, 4-uurs, 12-uurs en 24-uurszorg." },
+          { vraag: "Kost de intake geld?", antwoord: site.intakeKosten },
           { vraag: "Kan ik de zorg betalen met een pgb?", antwoord: "Ja. U kunt de zorg particulier betalen of vanuit een persoonsgebonden budget." },
           { vraag: "Heb ik een indicatie nodig?", antwoord: "Voor particuliere zorg niet. Voor een pgb wel: die indicatie komt van de gemeente, het CIZ of een wijkverpleegkundige, afhankelijk van de route." },
-          { vraag: "Zit ik ergens aan vast als ik contact opneem?", antwoord: "Nee. Een eerste gesprek is vrijblijvend." },
+          { vraag: "Zit ik ergens aan vast als ik contact opneem?", antwoord: "Nee. Contact opnemen en uw vraag bespreken is vrijblijvend." },
         ]}
       />
 

@@ -66,7 +66,7 @@ export default function Contact() {
             <h2 className="h2" style={{ fontSize: 24 }}>Wat gebeurt er daarna?</h2>
             <HartLijst items={[
               "Wij bellen of mailen u terug om uw vraag te bespreken",
-              `In ${site.plaats} plannen we een kennismaking bij u thuis, daarbuiten eerst ${site.buitenAlmere.kennismaking}`,
+              `In ${site.plaats} plannen we een intake bij u thuis, daarbuiten eerst ${site.buitenAlmere.kennismaking}`,
               "Samen maken we afspraken over de zorg en de tijden",
             ]} />
             <Plek />
@@ -84,7 +84,7 @@ export default function Contact() {
       <Faq
         kop="Veelgestelde vragen"
         vragen={[
-          { vraag: "Zit ik ergens aan vast als ik contact opneem?", antwoord: "Nee. Een eerste gesprek is vrijblijvend." },
+          { vraag: "Zit ik ergens aan vast als ik contact opneem?", antwoord: "Nee. Contact opnemen en uw vraag bespreken is vrijblijvend." },
           { vraag: "Kan ik de zorg betalen met een pgb?", antwoord: "Ja. U kunt de zorg particulier betalen of vanuit een persoonsgebonden budget." },
           { vraag: "Kan ik ook bellen namens een familielid?", antwoord: "Ja, dat kan. Vertel ons gerust voor wie u belt en wat er nodig is." },
         ]}

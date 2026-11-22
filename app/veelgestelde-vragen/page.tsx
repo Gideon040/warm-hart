@@ -20,6 +20,7 @@ const GROEPEN: { kop: string; vragen: Vraag[] }[] = [
       { vraag: "Wat kost een uur zorg?", antwoord: "Het tarief hangt af van de zorg en de tijden. U hoort het vooraf, zodat u niet voor verrassingen komt te staan." },
       { vraag: "Heb ik een indicatie nodig?", antwoord: "Voor particuliere zorg niet. Voor een pgb wel: die indicatie komt van de gemeente, het CIZ of een wijkverpleegkundige, afhankelijk van de route." },
       { vraag: "Wat is de minimale afname?", antwoord: "Zorg is mogelijk vanaf 3 uur per keer. Een korter bezoek, bijvoorbeeld 1 uur, is op aanvraag mogelijk." },
+      { vraag: "Kost de intake geld?", antwoord: site.intakeKosten },
       { vraag: `Komen jullie ook buiten ${site.plaats}?`, antwoord: `Ja, in de steden rond ${site.plaats}, vanaf ${site.buitenAlmere.minimum}. Voor kortere bezoeken is de reistijd te lang om een vast gezicht te bieden. In ${site.plaats} maken wij kennis bij u thuis; daarbuiten eerst ${site.buitenAlmere.kennismaking}.` },
     ],
   },
@@ -36,13 +37,13 @@ const GROEPEN: { kop: string; vragen: Vraag[] }[] = [
   {
     kop: "Praktisch",
     vragen: [
-      { vraag: "Hoe snel kan de zorg starten?", antwoord: "Er is op dit moment plek. Na de kennismaking spreken we samen een startdatum af." },
+      { vraag: "Hoe snel kan de zorg starten?", antwoord: "Er is op dit moment plek. Na de intake spreken we samen een startdatum af." },
       { vraag: "Kan ik ook in het weekend zorg krijgen?", antwoord: "Ja, alle zorg is ook op zaterdag en zondag mogelijk." },
       { vraag: "Wanneer bent u bereikbaar?", antwoord: "Op maandag tot en met vrijdag van 10:00 tot 17:00 uur. In het weekend alleen voor spoedaanvragen." },
       { vraag: `In welke delen van ${site.plaats} biedt u zorg?`, antwoord: `In heel ${site.plaats}: Stad, Buiten, Haven, Poort en Hout.` },
       { vraag: `Komen jullie ook buiten ${site.plaats}?`, antwoord: `Ja. Wij komen ook in ${site.steden.map((s) => s.naam).join(", ")}.` },
       { vraag: "Kan ik ook bellen namens een familielid?", antwoord: "Ja, dat kan. Vertel ons gerust voor wie u belt en wat er nodig is." },
-      { vraag: "Zit ik ergens aan vast als ik contact opneem?", antwoord: "Nee. Een eerste gesprek is vrijblijvend." },
+      { vraag: "Zit ik ergens aan vast als ik contact opneem?", antwoord: "Nee. Contact opnemen en uw vraag bespreken is vrijblijvend." },
     ],
   },
 ];

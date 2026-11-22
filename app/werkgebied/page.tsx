@@ -52,7 +52,7 @@ export default function Werkgebied() {
             <span className="hand schuin">wij komen naar u toe</span>
           </div>
           <p className="tekst" style={{ maxWidth: 720 }}>
-            In {site.plaats} komt alle zorg vanaf 3 uur per keer en maken wij kennis bij u thuis. In de steden rond {site.plaats} komen wij vanaf {site.buitenAlmere.minimum}, omdat de reistijd voor kortere bezoeken te lang is. De kennismaking doen wij daar eerst {site.buitenAlmere.kennismaking}.
+            In {site.plaats} komt alle zorg vanaf 3 uur per keer en doen wij de intake bij u thuis. In de steden rond {site.plaats} komen wij vanaf {site.buitenAlmere.minimum}, omdat de reistijd voor kortere bezoeken te lang is. De intake doen wij daar eerst {site.buitenAlmere.kennismaking}.
           </p>
           <div className="steden">
             {["Flevoland", "Noord-Holland", "Utrecht", "Gelderland"].map((prov) => {
