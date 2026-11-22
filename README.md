@@ -59,8 +59,8 @@ Let op: Het Reinhart Huis (ook Zorgbaar) bedient deels dezelfde steden.
   startdatum af." Contact-FAQ "Vertel me gerust" -> "Vertel ons gerust" (wij-vorm).
 
 ## Open punten (klant/Gideon)
-1. Organisatie aanmaken in het portaal met slug `warm-hart` (bestaat nog niet).
-2. Domein (nu placeholder `https://www.warmhartzorg.nl`), GA4 Measurement ID en GSC-verificatiecode.
+1. ~~Organisatie aanmaken in het portaal~~ gedaan: slug `particulierethuiszorgalmere` (status onboarding).
+2. Domein `particulierethuiszorgalmere.nl` registreren en koppelen, GA4 Measurement ID en GSC-verificatiecode.
 3. Wkkgz: geschilleninstantie en klachtenfunctionaris (klachtenregeling noemt ze nu zonder naam).
 4. Wtza-status, beroepsaansprakelijkheid.
 5. Bevestigen: worden zowel waakdienst als slaapdienst aangeboden?

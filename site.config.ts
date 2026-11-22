@@ -110,8 +110,7 @@ const vastePaginas = [
 ];
 
 export const site = {
-  // TODO: organisatie in het portaal aanmaken met exact deze slug.
-  slug: "warm-hart",
+  slug: "particulierethuiszorgalmere",
   naam: "Professioneel In Zorg met een warm Hart",
   // Korte merknaam voor paginatitels (bovenste regel van het logo), zodat
   // titels onder ~65 tekens blijven en het zoekwoord vooraan staat.
@@ -122,8 +121,7 @@ export const site = {
   email: "ondernemendaandeslag@hotmail.nl",
   // Productie-URL zonder slash aan het einde. Gebruikt voor sitemap,
   // robots, canonicals en schema.org.
-  // TODO: definitief domein invullen.
-  url: "https://www.warmhartzorg.nl",
+  url: "https://www.particulierethuiszorgalmere.nl",
   // TODO: datastream in "Zorgbaar Netwerk" aanmaken en het ID hier invullen.
   ga4Id: "G-XXXXXXX",
   // TODO: Google Search Console, HTML-tag-methode: alleen de content-waarde.
